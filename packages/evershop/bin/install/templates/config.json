@@ -1,7 +1,7 @@
 {
   "shop" : {
-    "currency": "USD",
-    "language": "en",
+    "currency": "RUB",
+    "language": "ru",
     "weightUnit": "kg"
   },
   "catalog": {

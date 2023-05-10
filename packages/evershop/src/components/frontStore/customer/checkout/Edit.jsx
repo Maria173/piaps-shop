@@ -52,15 +52,15 @@ export function Edit({
 
   return (
     <div className="">
-      <h4 className="mb-1 mt-1">{_('Contact information')}</h4>
-      {!customer && (
+      <h4 className="mb-1 mt-1">{_('Контактная информация')}</h4>
+      {/*{!customer && (
         <div className="mb-1">
           <span>{_('Already have an account?')}</span>{' '}
           <a className="text-interactive hover:underline" href={loginUrl}>
             {_('Login')}
           </a>
         </div>
-      )}
+      )}*/}
       <Form
         id="checkout-contact-info-form"
         action={addContactInfoApi}
@@ -68,7 +68,7 @@ export function Edit({
         isJSON
         onSuccess={onSuccess}
         submitBtn
-        btnText={_('Continue to shipping')}
+        btnText={_('ПРОДОЛЖИТЬ')}
       >
         <Field
           type="text"

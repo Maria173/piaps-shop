@@ -17,12 +17,12 @@ export function Province({
       type="select"
       value={provinces.find((p) => p.code === selectedProvince)?.code}
       name={fieldName}
-      label={_('Province')}
-      placeholder={_('Province')}
+      label={_('Область')}
+      placeholder={_('Область')}
       validationRules={[
         {
           rule: 'notEmpty',
-          message: _('Province is required')
+          message: _('Область обязательна')
         }
       ]}
       options={provinces.map((p) => ({ value: p.code, text: p.name }))}

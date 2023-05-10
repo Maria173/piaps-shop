@@ -12,7 +12,7 @@ export default function CouponForm({ cart: { applyCouponApi } }) {
 
   return (
     <div className="mt-4">
-      <Form
+      {/* <Form
         method="POST"
         isJSON
         action={applyCouponApi}
@@ -55,8 +55,8 @@ export default function CouponForm({ cart: { applyCouponApi } }) {
             />
           </div>
         </div>
-      </Form>
-    </div>
+      </Form>*/}
+    </div> 
   );
 }
 

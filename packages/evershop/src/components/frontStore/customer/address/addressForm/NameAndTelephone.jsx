@@ -11,12 +11,12 @@ export function NameAndTelephone({ address }) {
           type="text"
           name="address[full_name]"
           value={address?.fullName}
-          label={_('Full name')}
-          placeholder={_('Full name')}
+          label={_('ФИО')}
+          placeholder={_('ФИО')}
           validationRules={[
             {
               rule: 'notEmpty',
-              message: _('Full name is required')
+              message: _('ФИО обязательно')
             }
           ]}
         />
@@ -26,12 +26,12 @@ export function NameAndTelephone({ address }) {
           type="text"
           name="address[telephone]"
           value={address?.telephone}
-          label={_('Telephone')}
-          placeholder={_('Telephone')}
+          label={_('Телефон')}
+          placeholder={_('Телефон')}
           validationRules={[
             {
               rule: 'notEmpty',
-              message: _('Telephone is required')
+              message: _('Телефон обязателен')
             }
           ]}
         />

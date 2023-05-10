@@ -35,16 +35,16 @@ function Items({ items }) {
         <thead>
           <tr>
             <td>
-              <span>{_('Product')}</span>
+              <span>{_('Название')}</span>
             </td>
             <td>
-              <span>{_('Price')}</span>
+              <span>{_('Цена')}</span>
             </td>
             <td className="hidden md:table-cell">
-              <span>{_('Quantity')}</span>
+              <span>{_('Количество')}</span>
             </td>
             <td className="hidden md:table-cell">
-              <span>{_('Total')}</span>
+              <span>{_('Итог')}</span>
             </td>
           </tr>
         </thead>
@@ -110,7 +110,7 @@ function Items({ items }) {
                         href="#"
                         className="text-textSubdued underline"
                       >
-                        <span>{_('Remove')}</span>
+                        <span>{_('Удалить')}</span>
                       </a>
                     </div>
                   </div>
@@ -131,7 +131,7 @@ function Items({ items }) {
                   </div>
                 )}
                 <div className="md:hidden mt-05">
-                  <span>{_('Qty')}</span>
+                  <span>{_('Кол-во')}</span>
                   <span>{item.qty}</span>
                 </div>
               </td>

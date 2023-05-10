@@ -12,7 +12,7 @@ export default function Products({
     <div>
       <ProductList products={items} countPerRow={3} />
       <span className="product-count italic block mt-2">
-        {_('${count} products', { count: items.length })}
+        {_('${count} товар(ов)', { count: items.length })}
       </span>
     </div>
   );

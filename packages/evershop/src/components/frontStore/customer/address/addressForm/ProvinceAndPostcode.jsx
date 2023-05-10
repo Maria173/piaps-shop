@@ -24,12 +24,12 @@ export function ProvinceAndPostcode({
           type="text"
           name="address[postcode]"
           value={address?.postcode}
-          label={_('Postcode')}
-          placeholder={_('Postcode')}
+          label={_('Индекс')}
+          placeholder={_('Индекс')}
           validationRules={[
             {
               rule: 'notEmpty',
-              message: _('Postcode is required')
+              message: _('Индекс обязателен')
             }
           ]}
         />

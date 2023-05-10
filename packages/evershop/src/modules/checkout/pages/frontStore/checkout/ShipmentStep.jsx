@@ -27,8 +27,8 @@ export default function ShipmentStep({
   React.useEffect(() => {
     addStep({
       id: 'shipment',
-      title: _('Shipment'),
-      previewTitle: _('Ship to'),
+      title: _('Доставка'),
+      previewTitle: _('Адрес доставки'),
       isCompleted: !!(shippingAddress && shippingMethod),
       preview: shippingAddress
         ? `${shippingAddress.address1}, ${shippingAddress.city}, ${shippingAddress.country.name}`

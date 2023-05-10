@@ -98,7 +98,7 @@ export function StepContent({
         submitBtn={false}
         isJSON
       >
-        <h4 className="mb-1 mt-3">{_('Billing Address')}</h4>
+        <h4 className="mb-1 mt-3">{_('Адрес доставки чека')}</h4>
         <BillingAddress
           useShippingAddress={useShippingAddress}
           setUseShippingAddress={setUseShippingAddress}
@@ -121,7 +121,7 @@ export function StepContent({
           </div>
         )}
 
-        <h4 className="mb-1 mt-3">{_('Payment Method')}</h4>
+        <h4 className="mb-1 mt-3">{_('Способы оплаты')}</h4>
         {paymentMethods && paymentMethods.length > 0 && (
           <>
             <div className="divide-y border rounded border-divider px-2 mb-2">
@@ -143,7 +143,7 @@ export function StepContent({
               validationRules={[
                 {
                   rule: 'notEmpty',
-                  message: _('Please select a payment method')
+                  message: _('Пожалуйста выберите способ оплаты')
                 }
               ]}
             />
@@ -170,7 +170,7 @@ export function StepContent({
                   new Event('submit', { cancelable: true, bubbles: true })
                 );
             }}
-            title={_('Place Order')}
+            title={_('ЗАКАЗАТЬ')}
             isLoading={loading}
           />
         </div>

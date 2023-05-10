@@ -21,10 +21,10 @@ module.exports = {
       }
     },
     storeLanguage: () => {
-      return getConfig('shop.language', 'en');
+      return getConfig('shop.language', 'ru');
     },
     storeCurrency: () => {
-      return getConfig('shop.currency', 'USD');
+      return getConfig('shop.currency', 'RUB');
     },
     storeTimeZone: (setting) => {
       const storeTimeZone = setting.find((s) => s.name === 'storeTimeZone');

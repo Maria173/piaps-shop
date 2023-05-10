@@ -15,8 +15,8 @@ export default function PaymentStep({ cart }) {
   React.useEffect(() => {
     addStep({
       id: 'payment',
-      title: 'Payment',
-      previewTitle: 'Payment',
+      title: 'Оплата',
+      previewTitle: 'Оплата',
       isCompleted: false,
       sortOrder: 15,
       editable: true

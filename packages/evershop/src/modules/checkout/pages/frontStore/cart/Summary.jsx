@@ -7,7 +7,7 @@ import { _ } from '@evershop/evershop/src/lib/locale/translate';
 function Subtotal({ subTotal }) {
   return (
     <div className="flex justify-between gap-3">
-      <div>{_('Sub total')}</div>
+      <div>{_('Сумма')}</div>
       <div className="text-right">{subTotal.text}</div>
     </div>
   );
@@ -53,7 +53,7 @@ function Summary({
   return (
     <div className="summary">
       <div className="grid grid-cols-1 gap-2">
-        <h4>{_('Order summary')}</h4>
+        <h4>{_('Заказ')}</h4>
         <Area
           id="shoppingCartSummary"
           noOuter
@@ -75,7 +75,7 @@ function Summary({
               component: {
                 default: () => (
                   <div className="flex justify-between italic text-textSubdued">
-                    {_('Taxes and shipping calculated at checkout')}
+                    {_('Стоимость доставки рассчитывается при оформлении заказа')}
                   </div>
                 )
               },
@@ -87,7 +87,7 @@ function Summary({
         />
       </div>
       <div className="shopping-cart-checkout-btn flex justify-between mt-2">
-        <Button url={checkoutUrl} title={_('CHECKOUT')} variant="primary" />
+        <Button url={checkoutUrl} title={_('ОФОРМИТЬ')} variant="primary" />
       </div>
     </div>
   );

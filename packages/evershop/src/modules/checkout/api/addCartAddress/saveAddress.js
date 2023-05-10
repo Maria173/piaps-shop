@@ -29,7 +29,7 @@ module.exports = async (request, response, delegate, next) => {
     // Use shipping address as a billing address
     // Validate address
     if (!addressValidator(address)) {
-      throw new TypeError('Invalid Address');
+      throw new TypeError('Неверный адрес.');
     }
     // Save billing address
     const result = await insert('cart_address').given(address).execute(pool);
@@ -58,7 +58,7 @@ module.exports = async (request, response, delegate, next) => {
         return response.json({
           error: {
             status: INVALID_PAYLOAD,
-            message: 'We do not ship to this address'
+            message: 'К сожалению, доставка по этому адресу не осуществляется.'
           }
         });
       }

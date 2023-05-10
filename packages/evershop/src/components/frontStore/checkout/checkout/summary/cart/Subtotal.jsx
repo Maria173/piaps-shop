@@ -5,9 +5,9 @@ import { _ } from '@evershop/evershop/src/lib/locale/translate';
 export function Subtotal({ count, total }) {
   return (
     <div className="summary-row">
-      <span>{_('Sub total')}</span>
+      <span>{_('Количество')}</span>
       <div>
-        <div>{_('${count} items', { count })}</div>
+        <div>{_('${count} шт.', { count })}</div>
         <div>{total}</div>
       </div>
     </div>

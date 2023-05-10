@@ -7,8 +7,8 @@ import { _ } from '@evershop/evershop/src/lib/locale/translate';
 
 // TODO: make this list configurable
 const sortingOptions = [
-  { code: 'price', name: 'Price' },
-  { code: 'name', name: 'Name' }
+  { code: 'price', name: 'Цена' },
+  { code: 'name', name: 'Название' }
 ];
 
 export default function Sorting() {
@@ -62,7 +62,7 @@ export default function Sorting() {
     <div className="product-sorting mb-1">
       <div className="product-sorting-inner flex justify-end items-center space-x-05">
         <div>
-          <span>{_('Sort By')}:</span>
+          <span>{_('Сортировать по')}:</span>
         </div>
         <div style={{ width: '160px' }}>
           <Select
@@ -74,7 +74,7 @@ export default function Sorting() {
             options={[
               {
                 value: '',
-                text: _('Please select')
+                text: _('Выбрать')
               }
             ].concat(
               sortingOptions.map((o) => ({ value: o.code, text: o.name }))

@@ -36,10 +36,10 @@ export default function CustomerInfo({
         </div>
         <div className="self-center">
           <span style={{ fontSize: '1.6rem', fontWeight: '300' }}>
-            {_('Order #${orderNumber}', { orderNumber })}
+            {_('Заказ #${orderNumber}', { orderNumber })}
           </span>
           <div>
-            {_('Thank you ${name}!', {
+            {_('Спасибо ${name}!', {
               name: customerFullName || billingAddress?.fullName
             })}
           </div>
@@ -48,16 +48,16 @@ export default function CustomerInfo({
 
       <div className="customer-info mt-3 mb-2">
         <div className="heading font-bold mb-2">
-          {_('Customer information')}
+          {_('Информация о заказе')}
         </div>
         <div className="grid grid-cols-2 gap-3">
           <div>
             <div className="mb-2">
-              <div className="mb-075">{_('Contact information')}</div>
+              <div className="mb-075">{_('Контактная информация')}</div>
               <div className="text-textSubdued">{customerEmail}</div>
             </div>
             <div>
-              <div className="mb-075">{_('Shipping Address')}</div>
+              <div className="mb-075">{_('Доставка')}</div>
               <div className="text-textSubdued">
                 <AddressSummary address={shippingAddress} />
               </div>
@@ -65,11 +65,11 @@ export default function CustomerInfo({
           </div>
           <div>
             <div className="mb-2">
-              <div className="mb-075">{_('Payment Method')}</div>
-              <div className="text-textSubdued">{paymentMethodName}</div>
+              <div className="mb-075">{_('Оплата')}</div>
+              <div className="text-textSubdued">{paymentMethodName === 'Cash On Delivery' ? 'Оплата при получении' : paymentMethodName}</div>
             </div>
             <div>
-              <div className="mb-075">{_('Billing Address')}</div>
+              <div className="mb-075">{_('Адрес доставки чека')}</div>
               <div className="text-textSubdued">
                 <AddressSummary address={billingAddress} />
               </div>
@@ -77,7 +77,7 @@ export default function CustomerInfo({
           </div>
         </div>
       </div>
-      <Button url="/" title={_('CONTINUE SHOPPING')} />
+      <Button url="/" title={_('ПРОДОЛЖИТЬ ПОКУПКИ')} />
     </div>
   );
 }
