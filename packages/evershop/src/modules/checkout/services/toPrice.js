@@ -29,8 +29,8 @@ exports.toPrice = function toPrice(value, forDisplay = false) {
   if (!forDisplay) {
     return price;
   } else {
-    const currency = getConfig('shop.currency', 'USD');
-    const language = getConfig('shop.language', 'en');
+    const currency = getConfig('shop.currency', 'RUB');
+    const language = getConfig('shop.language', 'ru');
     return new Intl.NumberFormat(language, {
       style: 'currency',
       currency

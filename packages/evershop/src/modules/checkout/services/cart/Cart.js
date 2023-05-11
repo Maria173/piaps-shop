@@ -53,7 +53,7 @@ exports.Cart = class Cart extends DataObject {
       key: 'currency',
       resolvers: [
         async function resolver() {
-          const currency = await getSetting('storeCurrency', 'USD');
+          const currency = await getSetting('storeCurrency', 'RUB');
           return currency;
         }
       ]

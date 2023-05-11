@@ -7,8 +7,8 @@ export function ItemOptions({ options = [] }) {
   if (options.length === 0) {
     return null;
   }
-  const currency = get(useAppState(), 'currency', 'USD');
-  const language = get(useAppState(), 'language', 'en');
+  const currency = get(useAppState(), 'currency', 'RUB');
+  const language = get(useAppState(), 'language', 'ru');
 
   return (
     <div className="cart-item-options mt-05">

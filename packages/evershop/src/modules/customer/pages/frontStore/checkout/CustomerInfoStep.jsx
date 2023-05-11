@@ -23,8 +23,8 @@ export default function ContactInformationStep({
   React.useEffect(() => {
     addStep({
       id: 'contact',
-      title: _('Contact information'),
-      previewTitle: _('Contact'),
+      title: _('Контактная информация'),
+      previewTitle: _('Email'),
       isCompleted: !!customerEmail,
       preview: customerEmail || '',
       sortOrder: 5,

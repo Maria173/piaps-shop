@@ -80,7 +80,7 @@ function CompletedSteps() {
                     editStep(step.id);
                   }}
                 >
-                  {_('Change')}
+                  {_('Изменить')}
                 </a>
               )}
             </div>

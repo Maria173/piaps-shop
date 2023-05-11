@@ -18,14 +18,14 @@ export function Country({
       <Field
         type="select"
         value={selectedCountry}
-        label={_('Country')}
+        label={_('Страна')}
         name={fieldName}
-        placeholder={_('Country')}
+        placeholder={_('Страна')}
         onChange={onChange}
         validationRules={[
           {
             rule: 'notEmpty',
-            message: _('Country is required')
+            message: _('Страна обязательна')
           }
         ]}
         options={allowCountries.map((c) => ({ value: c.code, text: c.name }))}

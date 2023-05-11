@@ -39,7 +39,7 @@ export default function ShoppingCart({ cart, removeUrl }) {
             coreComponents={[
               {
                 component: { default: Title },
-                props: { title: 'Shopping cart' },
+                props: { title: 'Корзина' },
                 sortOrder: 10,
                 id: 'shoppingCartTitle'
               }

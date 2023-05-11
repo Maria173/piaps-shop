@@ -35,8 +35,8 @@ module.exports = async function lifetimeSales(
       cancelled += 1;
     }
   });
-  const currency = await getSetting('storeCurrency', 'USD');
-  const language = await getSetting('storeLanguage', 'en');
+  const currency = await getSetting('storeCurrency', 'RUB');
+  const language = await getSetting('storeLanguage', 'ru');
   const formatedTotal = new Intl.NumberFormat(language, {
     style: 'currency',
     currency

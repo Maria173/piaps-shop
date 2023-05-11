@@ -128,7 +128,7 @@ export default function CheckoutForm() {
       });
 
       if (payload.error) {
-        setError(`Payment failed ${payload.error.message}`);
+        setError(`Оплата не удалась. ${payload.error.message}`);
       } else {
         setError(null);
         setSucceeded(true);
@@ -189,35 +189,35 @@ export default function CheckoutForm() {
           {showTestCard === 'success' && (
             <div>
               <div>
-                <b>Test success:</b>
+                <b>Тестовая карта для успешной оплаты:</b>
               </div>
               <div className="text-sm text-gray-600">
-                Test card number: 4242 4242 4242 4242
+                Номер карты: 4242 4242 4242 4242
               </div>
               <div className="text-sm text-gray-600">
-                Test card expiry: 04/24
+                Срок действия: 04/24
               </div>
-              <div className="text-sm text-gray-600">Test card CVC: 242</div>
+              <div className="text-sm text-gray-600">CVC: 242</div>
             </div>
           )}
           {showTestCard === 'failure' && (
             <div>
               <div>
-                <b>Test failure:</b>
+                <b>Тестовая карта для неудачной оплаты:</b>
               </div>
               <div className="text-sm text-gray-600">
-                Test card number: 4000 0000 0000 9995
+                Номер карты: 4000 0000 0000 9995
               </div>
               <div className="text-sm text-gray-600">
-                Test card expiry: 04/24
+                Срок действия: 04/24
               </div>
-              <div className="text-sm text-gray-600">Test card CVC: 242</div>
+              <div className="text-sm text-gray-600">CVC: 242</div>
             </div>
           )}
         </div>
         <div className="stripe-form-heading flex justify-between">
           <div className="self-center">
-            <svg
+            {/*<svg
               id="Layer_1"
               data-name="Layer 1"
               xmlns="http://www.w3.org/2000/svg"
@@ -242,18 +242,18 @@ export default function CheckoutForm() {
               <path d="M107.28,10.24l-2.65.58v8.93a2.77,2.77,0,0,0,2.82,2.87,4.16,4.16,0,0,0,1.91-.37V20c-.35.15-2.06.66-2.06-1V15h2.06V12.66h-2.06Z" />
               <polygon points="116.25 11.7 118.98 11.13 118.98 8.97 116.25 9.54 116.25 11.7" />
               <rect x="116.25" y="12.61" width="2.73" height="9.64" />
-            </svg>
+            </svg>*/}
           </div>
           <div className="self-center flex space-x-1">
             <Button
               onAction={testSuccess}
-              title="Test success"
+              title="Успешная оплата"
               outline
               variant="interactive"
             />
             <Button
               onAction={testFailure}
-              title="Test failure"
+              title="Неудачная оплата"
               variant="critical"
               outline
             />
@@ -278,7 +278,7 @@ export default function CheckoutForm() {
         validationRules={[
           {
             rule: 'notEmpty',
-            message: 'Please complete the card information'
+            message: 'Введите данные карты'
           }
         ]}
       />

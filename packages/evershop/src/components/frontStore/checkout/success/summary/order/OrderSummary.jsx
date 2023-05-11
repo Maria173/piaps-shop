@@ -19,8 +19,8 @@ function OrderSummary({
     <div className="checkout-summary-block">
       <Subtotal count={items.length} total={subTotal.text} />
       <Shipping method={shippingMethodName} cost={shippingFeeExclTax.text} />
-      <Tax taxClass="" amount={taxAmount.text} />
-      <Discount code="" amount={discountAmount.text} />
+      {/*<Tax taxClass="" amount={taxAmount.text} />
+  <Discount code="" amount={discountAmount.text} />*/}
       <Total total={grandTotal.text} />
     </div>
   );

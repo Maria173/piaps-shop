@@ -17,7 +17,7 @@ export function BillingAddress({ useShippingAddress, setUseShippingAddress }) {
             setUseShippingAddress(false);
           }
         }}
-        label={_('My billing address is same as shipping address')}
+        label={_('Адрес для доставки чека совпадает с адресом доставки товара')}
         isChecked={useShippingAddress === true}
       />
     </div>

@@ -145,15 +145,15 @@ export default function ShippingMethods({
           </svg>
         </div>
       )}
-      <h4 className="mt-3 mb-1">{_('Shipping Method')}</h4>
+      <h4 className="mt-3 mb-1">{_('Способ доставки')}</h4>
       {addressProvided === true && methods.length === 0 && (
         <div className="text-center p-3 border border-divider rounded text-textSubdued">
-          {_('Sorry, there is no available method for your address')}
+          {_('Простите, но на данный адрес доставка не осуществляется')}
         </div>
       )}
       {addressProvided === false && (
         <div className="text-center p-3 border border-divider rounded text-textSubdued">
-          {_('Please enter a shipping address in order to see shipping quotes')}
+          {_('Введите данные, чтобы увидеть способы доставки')}
         </div>
       )}
       {methods.length > 0 && (

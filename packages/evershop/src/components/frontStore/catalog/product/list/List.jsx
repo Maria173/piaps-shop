@@ -11,7 +11,7 @@ export default function ProductList({ products = [], countPerRow = 3 }) {
   if (products.length === 0) {
     return (
       <div className="product-list">
-        <div className="text-center">{_('There is no product to display')}</div>
+        <div className="text-center">{_('Нет подходящих товаров')}</div>
       </div>
     );
   }

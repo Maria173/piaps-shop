@@ -16,7 +16,7 @@ function ToastMessage({ thumbnail, name, qty, count, cartUrl, toastId }) {
   return (
     <div className="toast-mini-cart">
       <div className="top-head grid grid-cols-2">
-        <div className="self-center">{_('JUST ADDED TO YOUR CART')}</div>
+        <div className="self-center">{_('ДОБАВЛЕНО В КОРЗИНУ')}</div>
         <div className="self-center close flex justify-end">
           <a
             href="#"
@@ -51,13 +51,13 @@ function ToastMessage({ thumbnail, name, qty, count, cartUrl, toastId }) {
             <span className="font-bold">{name}</span>
           </div>
           <div>
-            Qty:
+            Кол-во:
             {qty}
           </div>
         </div>
       </div>
       <a className="add-cart-popup-button" href={cartUrl}>
-        {_('VIEW CART (${count})', { count })}
+        {_('ПЕРЕЙТИ В КОРЗИНУ (${count})', { count })}
       </a>
       <a
         className="add-cart-popup-continue text-center underline block"
@@ -67,7 +67,7 @@ function ToastMessage({ thumbnail, name, qty, count, cartUrl, toastId }) {
           toast.dismiss(toastId);
         }}
       >
-        {_('Continue Shopping')}
+        {_('Продолжить покупки')}
       </a>
     </div>
   );
@@ -92,7 +92,7 @@ function AddToCart({ stockAvaibility, loading = false, error }) {
           validationRules={['notEmpty']}
           className="qty"
           name="qty"
-          placeholder="Qty"
+          placeholder="Кол-во"
           formId="productForm"
         />
       </div>
@@ -100,7 +100,7 @@ function AddToCart({ stockAvaibility, loading = false, error }) {
       <div className="mt-1">
         {stockAvaibility === true && (
           <Button
-            title={_('ADD TO CART')}
+            title={_('ДОБАВИТЬ В КОРЗИНУ')}
             outline
             isLoading={loading}
             onAction={() => {

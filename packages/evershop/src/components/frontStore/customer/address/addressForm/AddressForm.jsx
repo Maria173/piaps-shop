@@ -42,8 +42,8 @@ export function CustomerAddressForm({
             name: 'address[address_1]',
             value: address?.address1,
             formId,
-            label: _('Address'),
-            placeholder: _('Address'),
+            label: _('Адрес'),
+            placeholder: _('Адрес'),
             validationRules: ['notEmpty']
           },
           sortOrder: 20
@@ -54,8 +54,8 @@ export function CustomerAddressForm({
             type: 'text',
             name: 'address[city]',
             value: address?.city,
-            label: _('City'),
-            placeholder: _('City'),
+            label: _('Город'),
+            placeholder: _('Город'),
             validationRules: []
           },
           sortOrder: 40

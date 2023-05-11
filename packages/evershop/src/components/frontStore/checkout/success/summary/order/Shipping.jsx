@@ -9,7 +9,7 @@ export function Shipping({ method, cost }) {
 
   return (
     <div className="summary-row">
-      <span>{_('Shipping')}</span>
+      <span>{_('Доставка')}</span>
       <div>
         <div>{method}</div>
         <div>{cost}</div>

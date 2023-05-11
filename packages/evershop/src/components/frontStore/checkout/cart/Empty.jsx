@@ -14,17 +14,17 @@ export function Empty() {
     <div className="empty-shopping-cart w-100" style={{ marginTop: '150px' }}>
       <div>
         <div className="text-center">
-          <h2>{_('Shopping cart')}</h2>
+          <h2>{_('Корзина')}</h2>
         </div>
         <div className="mt-2 text-center">
-          <span>{_('Your cart is empty!')}</span>
+          <span>{_('Ваша корзина пуста!')}</span>
         </div>
         <div className="flex justify-center mt-2">
           <Button
             url="/"
             title={
               <span className="flex space-x-1">
-                <span className="self-center">{_('CONTINUE SHOPPING')}</span>{' '}
+                <span className="self-center">{_('ПРОДОЛЖИТЬ ПОКУПКИ')}</span>{' '}
                 <svg
                   className="self-center"
                   style={{ width: '2.5rem', height: '2.5rem' }}

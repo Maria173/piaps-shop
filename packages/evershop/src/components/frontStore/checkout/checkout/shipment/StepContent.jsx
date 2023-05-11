@@ -43,13 +43,13 @@ export function StepContent({
 
   return (
     <div>
-      <h4 className="mb-1 mt-3">{_('Shipping Address')}</h4>
+      <h4 className="mb-1 mt-3">{_('Адрес доставки')}</h4>
       <Form
         method="POST"
         action={addShippingAddressApi}
         id="checkoutShippingAddressForm"
         isJSON
-        btnText={_('Continue to payment')}
+        btnText={_('ПЕРЕЙТИ К ОПЛАТЕ')}
         onSuccess={(response) => {
           if (!response.error) {
             client

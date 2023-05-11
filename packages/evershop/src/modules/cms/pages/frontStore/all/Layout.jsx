@@ -77,7 +77,7 @@ export default function Layout() {
                   />
                 </svg>
               </div>
-              <div>
+              {/*<div>
                 <svg
                   viewBox="0 0 38 24"
                   xmlns="http://www.w3.org/2000/svg"
@@ -108,12 +108,12 @@ export default function Layout() {
                     d="M23.3 8.1c-.1-.1-.2-.1-.3-.1-.1 0-.2 0-.3-.1-.3-.1-.7-.1-1.1-.1h-3c-.1 0-.2 0-.2.1-.2.1-.3.2-.3.4l-.7 4.4v.1c0-.3.3-.5.6-.5h1.3c2.5 0 4.1-1 4.6-3.8v-.2c-.1-.1-.3-.2-.5-.2h-.1z"
                   />
                 </svg>
-              </div>
+              </div>*/}
             </div>
           </div>
           <div className="self-center">
             <div className="copyright text-center md:text-right text-textSubdued">
-              <span>Copyright © 2020 EverShop</span>
+              <span>Copyright © 2023 UlskMerch</span>
             </div>
           </div>
         </div>

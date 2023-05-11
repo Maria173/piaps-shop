@@ -4,7 +4,7 @@ import React from 'react';
 export function Sku({ sku }) {
   return (
     <div className="product-single-sku text-textSubdued">
-      <span>Sku</span>
+      <span>Артикул</span>
       <span>: </span>
       {sku}
     </div>

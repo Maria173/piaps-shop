@@ -68,7 +68,7 @@ export function Paypal({
     <div>
       {error && <div className="text-critical mb-1">{error}</div>}
       <div className="p-2 text-center border rounded mt-1 border-divider">
-        You will be redirected to PayPal
+        Вы будете перенаправлены на страницу сервиса PayPal
       </div>
     </div>
   );
