@@ -24,7 +24,7 @@ export default function ProductEditForm({ action }) {
             )
           );
         } else {
-          toast.success('Product saved successfully!');
+          toast.success('Товар успешно сохранен!');
         }
       }}
       submitBtn={false}

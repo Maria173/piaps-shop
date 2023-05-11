@@ -35,7 +35,7 @@ export default function Logo({ dashboardUrl }) {
               gradientUnits="userSpaceOnUse"
             >
               <stop stopColor="#00546B" />
-              <stop offset="1" stopColor="#27BEA3" />
+              <stop offset="1" stopColor="#121212" />
             </linearGradient>
             <linearGradient
               id="paint1_linear_375_2"
@@ -46,7 +46,7 @@ export default function Logo({ dashboardUrl }) {
               gradientUnits="userSpaceOnUse"
             >
               <stop stopColor="#00546B" />
-              <stop offset="1" stopColor="#27BEA3" />
+              <stop offset="1" stopColor="#121212" />
             </linearGradient>
             <linearGradient
               id="paint2_linear_375_2"
@@ -57,11 +57,11 @@ export default function Logo({ dashboardUrl }) {
               gradientUnits="userSpaceOnUse"
             >
               <stop stopColor="#00546B" />
-              <stop offset="1" stopColor="#27BEA3" />
+              <stop offset="1" stopColor="#121212" />
             </linearGradient>
           </defs>
         </svg>
-        <span className="font-bold">EVERSHOP</span>
+        <span className="font-bold">UlskMerch</span>
       </a>
     </div>
   );

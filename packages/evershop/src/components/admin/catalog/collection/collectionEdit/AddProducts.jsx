@@ -80,7 +80,7 @@ function AddProducts({ addProductApi, collectionId, closeModal }) {
   }
 
   return (
-    <Card title="Add Products">
+    <Card title="Добавить товары">
       <div className="modal-content">
         <Card.Session>
           <div>
@@ -88,7 +88,7 @@ function AddProducts({ addProductApi, collectionId, closeModal }) {
               <input
                 type="text"
                 value={inputValue}
-                placeholder="Search products"
+                placeholder="Найти товары"
                 onChange={(e) => setInputValue(e.target.value)}
               />
             </div>
@@ -135,7 +135,7 @@ function AddProducts({ addProductApi, collectionId, closeModal }) {
                               await addProduct(product.uuid);
                             }}
                           >
-                            Add
+                            Добавить
                           </button>
                         )}
                         {(addedProducts.includes(product.uuid) ||
@@ -157,7 +157,7 @@ function AddProducts({ addProductApi, collectionId, closeModal }) {
       </div>
       <Card.Session>
         <div className="flex justify-end">
-          <Button title="Close" variant="secondary" onAction={closeModal} />
+          <Button title="Закрыть" variant="secondary" onAction={closeModal} />
         </div>
       </Card.Session>
     </Card>

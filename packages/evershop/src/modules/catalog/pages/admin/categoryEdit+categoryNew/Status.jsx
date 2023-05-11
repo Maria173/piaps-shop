@@ -6,24 +6,24 @@ import { Card } from '@components/admin/cms/Card';
 export default function Status({ category }) {
   return (
     <Card>
-      <Card.Session title="Status">
+      <Card.Session title="Статус">
         <Field
           type="radio"
           name="status"
           options={[
-            { value: 0, text: 'Disabled' },
-            { value: 1, text: 'Enabled' }
+            { value: 0, text: 'Недоступный' },
+            { value: 1, text: 'Доступный' }
           ]}
           value={category?.status}
         />
       </Card.Session>
-      <Card.Session title="Include In Store Menu">
+      <Card.Session title="Включить в меню магазина">
         <Field
           type="radio"
           name="include_in_nav"
           options={[
-            { value: 0, text: 'No' },
-            { value: 1, text: 'Yes' }
+            { value: 0, text: 'Нет' },
+            { value: 1, text: 'Да' }
           ]}
           value={category?.includeInNav}
         />

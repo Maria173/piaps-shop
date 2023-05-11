@@ -24,7 +24,7 @@ function Zone({ zone, countries, getZones }) {
                 modal.openModal();
               }}
             >
-              Edit Zone
+              Редактировать
             </a>
           </div>
         </div>

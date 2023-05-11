@@ -12,7 +12,7 @@ export default function CheckoutMenuGroup({ orderGrid }) {
         {
           Icon,
           url: orderGrid,
-          title: 'Orders'
+          title: 'Заказы'
         }
       ]}
     />

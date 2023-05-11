@@ -35,7 +35,7 @@ export default function DropdownColumnHeader({
             onChange={(e) => onChange(e)}
             className="form-control"
             value={current}
-            options={[{ value: 'all', text: 'All' }].concat(options)}
+            options={[{ value: 'all', text: 'Все' }].concat(options)}
           />
         </div>
       </div>

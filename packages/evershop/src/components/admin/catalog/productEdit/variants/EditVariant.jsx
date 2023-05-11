@@ -47,7 +47,7 @@ export function EditVariant({
               <div className="flex justify-end">
                 <div className="grid grid-cols-2 gap-1">
                   <Button
-                    title="Save"
+                    title="Сохранить"
                     variant="primary"
                     onAction={() => {
                       document.getElementById(formId).dispatchEvent(
@@ -59,7 +59,7 @@ export function EditVariant({
                     }}
                   />
                   <Button
-                    title="Cancel"
+                    title="Отмена"
                     variant="secondary"
                     onAction={closeAlert}
                   />

@@ -58,13 +58,13 @@ export default function Image({ category, imageUploadUrl }) {
 
   return (
     <Card
-      title="Category banner"
+      title="Заставка"
       actions={
         image
           ? [
-              { name: 'Change', onAction: () => ref.current.click() },
+              { name: 'Изменить', onAction: () => ref.current.click() },
               {
-                name: 'Remove',
+                name: 'Удалить',
                 variant: 'critical',
                 onAction: () => setImage(undefined)
               }
@@ -124,7 +124,7 @@ export default function Image({ category, imageUploadUrl }) {
             </div>
             <div className="flex justify-center">
               <Button
-                title="Add image"
+                title="Добавить изображение"
                 variant="default"
                 onAction={() => ref.current.click()}
               />

@@ -31,7 +31,7 @@ export default function SaleStatistic({ api }) {
 
   if (fetching) {
     return (
-      <Card title="Sale Statistic">
+      <Card title="Статистика продаж">
         <div className="skeleton-wrapper-statistic">
           <div className="skeleton" />
         </div>
@@ -40,18 +40,18 @@ export default function SaleStatistic({ api }) {
   } else {
     return (
       <Card
-        title="Sale Statistic"
+        title="Статистика продаж"
         actions={[
           {
-            name: 'Daily',
+            name: 'Ежедневно',
             onAction: () => setPeriod('daily')
           },
           {
-            name: 'Weekly',
+            name: 'Еженедельно',
             onAction: () => setPeriod('weekly')
           },
           {
-            name: 'Monthly',
+            name: 'Ежемесячно',
             onAction: () => setPeriod('monthly')
           }
         ]}

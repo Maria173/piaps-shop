@@ -6,16 +6,16 @@ import { Card } from '@components/admin/cms/Card';
 export default function Inventory({ product }) {
   const inventory = product?.inventory || {};
   return (
-    <Card title="Inventory" subdued>
+    <Card title="Инвентарь" subdued>
       <Card.Session>
         <Field
           id="manage_stock"
           name="manage_stock"
           value={inventory.manageStock}
-          label="Manage stock?"
+          label="Управлять заказами?"
           options={[
-            { value: 0, text: 'No' },
-            { value: 1, text: 'Yes' }
+            { value: 0, text: 'Нет' },
+            { value: 1, text: 'Да' }
           ]}
           type="radio"
         />
@@ -25,10 +25,10 @@ export default function Inventory({ product }) {
           id="stock_availability"
           name="stock_availability"
           value={inventory.stockAvailability}
-          label="Stock availability"
+          label="Наличие на складе"
           options={[
-            { value: 0, text: 'No' },
-            { value: 1, text: 'Yes' }
+            { value: 0, text: 'Нет' },
+            { value: 1, text: 'Есть' }
           ]}
           type="radio"
         />
@@ -38,8 +38,8 @@ export default function Inventory({ product }) {
           id="qty"
           name="qty"
           value={inventory.qty}
-          placeholder="Quantity"
-          label="Quantity"
+          placeholder="Количество"
+          label="Количество"
           type="text"
           validationRules={['notEmpty']}
         />

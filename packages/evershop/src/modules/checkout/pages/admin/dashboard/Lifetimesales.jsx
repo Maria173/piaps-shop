@@ -44,7 +44,7 @@ export default function LifetimeSale({ api }) {
 
   if (fetching) {
     return (
-      <Card title="Lifetime Sale">
+      <Card title="Общая статитстика">
         <Card.Session>
           <div className="skeleton-wrapper-lifetime">
             <div className="skeleton" />
@@ -62,27 +62,27 @@ export default function LifetimeSale({ api }) {
     );
   } else {
     return (
-      <Card title="Lifetime Sale">
+      <Card title="Общая статитстика">
         <Card.Session>
           <div className="grid grid-cols-1 gap-1">
             <div className="flex space-x-1 items-center">
               <Dot variant="info" />
-              <div className="self-center">{orders} orders</div>
+              <div className="self-center">{orders} заказов</div>
             </div>
             <div className="flex space-x-1 items-center">
               <Dot variant="info" />
-              <div className="self-center">{total} lifetime sale</div>
+              <div className="self-center">{total} всего заработано</div>
             </div>
             <div className="flex space-x-1 items-center">
               <Dot variant="success" />
               <div className="self-center">
-                {completed_percentage}% of orders completed
+                {completed_percentage}% заказов выполенное
               </div>
             </div>
             <div className="flex space-x-1 items-center">
               <Dot variant="critical" />
               <div className="self-center">
-                {cancelled_percentage}% of orders cancelled
+                {cancelled_percentage}% заказов отмененно
               </div>
             </div>
           </div>

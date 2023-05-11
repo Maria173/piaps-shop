@@ -195,7 +195,7 @@ export function Form(props) {
           {submitBtn === true && (
             <div className="form-submit-button flex border-t border-divider mt-1 pt-1">
               <Button
-                title={btnText || 'Save'}
+                title={btnText || 'Сохранить'}
                 onAction={() => {
                   document
                     .getElementById(id)

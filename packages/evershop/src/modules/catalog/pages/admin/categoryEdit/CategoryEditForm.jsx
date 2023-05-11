@@ -24,7 +24,7 @@ export default function CategoryEditForm({ action }) {
             )
           );
         } else {
-          toast.success('Category saved successfully!');
+          toast.success('Категория успешно сохранена!');
         }
       }}
       submitBtn={false}

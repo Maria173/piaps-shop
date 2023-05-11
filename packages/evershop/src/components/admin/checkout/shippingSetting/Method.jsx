@@ -13,7 +13,7 @@ function Method({ method, getZones }) {
       <>
         <td className="border-none py-1">{method.name}</td>
         <td className="border-none py-1">
-          {method.isEnabled ? 'Enabled' : 'Disabled'}
+          {method.isEnabled ? 'Доступный' : 'Недоступный'}
         </td>
         <td className="border-none py-1">{method.cost?.text}</td>
         <td className="border-none py-1">

@@ -8,8 +8,8 @@ export default function AttributeEditPageHeading({ backUrl, attribute }) {
       backUrl={backUrl}
       heading={
         attribute
-          ? `Editing ${attribute.attributeName}`
-          : 'Create A New Attribute'
+          ? `Редактировать ${attribute.attributeName}`
+          : 'Создать новый атрибут'
       }
     />
   );

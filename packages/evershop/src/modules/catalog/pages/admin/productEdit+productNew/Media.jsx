@@ -11,7 +11,7 @@ export default function Media({ id, product, productImageUploadUrl }) {
     gallery = [image].concat(gallery);
   }
   return (
-    <Card title="Media">
+    <Card title="Изображение">
       <Card.Session>
         <ProductMediaManager
           id={id || 'images'}

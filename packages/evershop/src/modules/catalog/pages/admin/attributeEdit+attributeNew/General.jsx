@@ -28,7 +28,7 @@ function Groups({ groups, createGroupApi }) {
 
   const createGroup = () => {
     if (!newGroup.current.value) {
-      setCreateGroupError('Group name is required');
+      setCreateGroupError('Требуется указать название группы');
       return;
     }
     fetch(createGroupApi, {
@@ -61,7 +61,7 @@ function Groups({ groups, createGroupApi }) {
 
   return (
     <div>
-      <div className="mb-1">Select groups the attribute belongs to</div>
+      <div className="mb-1">Выберите группы, к которым принадлежит атрибут</div>
       <div className="grid gap-2 grid-cols-2">
         <div>
           <Select
@@ -76,7 +76,7 @@ function Groups({ groups, createGroupApi }) {
           <div>
             <Input
               type="text"
-              placeholder="Create a new group"
+              placeholder="Создать группу"
               ref={newGroup}
               error={createGroupError}
               suffix={
@@ -171,7 +171,7 @@ function Options({ originOptions = [] }) {
                 onClick={(e) => removeOption(uuid, e)}
                 className="text-critical hover:underline"
               >
-                Remove option
+                Удалить опцию
               </a>
             </div>
           </div>
@@ -183,7 +183,7 @@ function Options({ originOptions = [] }) {
           onClick={(e) => addOption(e)}
           className="text-interactive hover:underline"
         >
-          Add option
+          Добавить опцию
         </a>
       </div>
     </div>
@@ -207,7 +207,7 @@ export default function General({ attribute, createGroupApi }) {
       props: {
         id: 'attributeName',
         name: 'attribute_name',
-        label: 'Name',
+        label: 'Название',
         validationRules: ['notEmpty'],
         type: 'text'
       },
@@ -218,7 +218,7 @@ export default function General({ attribute, createGroupApi }) {
       props: {
         id: 'attributeCode',
         name: 'attribute_code',
-        label: 'Attribute code',
+        label: 'Код атрибута',
         validationRules: ['notEmpty'],
         type: 'text'
       },
@@ -239,12 +239,12 @@ export default function General({ attribute, createGroupApi }) {
         id: 'type',
         type: 'radio',
         name: 'type',
-        label: 'Type',
+        label: 'Тип',
         options: [
-          { value: 'text', text: 'Text' },
-          { value: 'select', text: 'Select' },
-          { value: 'multiselect', text: 'Multiselect' },
-          { value: 'textarea', text: 'Textarea' }
+          { value: 'text', text: 'Текст' },
+          { value: 'select', text: 'Выбор' },
+          { value: 'multiselect', text: 'Множественный выбор' },
+          { value: 'textarea', text: 'Текстовый блок' }
         ],
         onChange: (value) => {
           setType(value);
@@ -261,16 +261,16 @@ export default function General({ attribute, createGroupApi }) {
   });
 
   return (
-    <Card title="General">
+    <Card title="Основное">
       <Card.Session>
         <Area id="attributeEditGeneral" coreComponents={fields} />
       </Card.Session>
       {['select', 'multiselect'].includes(type) && (
-        <Card.Session title="Attribute options">
+        <Card.Session title="Параметры атрибута">
           <Options originOptions={get(attribute, 'options', [])} />
         </Card.Session>
       )}
-      <Card.Session title="Attribute Group">
+      <Card.Session title="Группа атрибута">
         <Groups
           groups={get(attribute, 'groups', [])}
           createGroupApi={createGroupApi}

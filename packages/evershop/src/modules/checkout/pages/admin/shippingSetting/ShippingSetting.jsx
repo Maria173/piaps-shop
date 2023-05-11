@@ -82,9 +82,9 @@ export default function ShippingSetting({ createShippingZoneApi }) {
         </div>
         <div className="col-span-4">
           <Card>
-            <Card.Session title="Shipping">
+            <Card.Session title="Доставка">
               <div>
-                Choose where you ship and how much you charge for shipping.
+              Выберите, куда вы отправляете товар и сколько берете за доставку.
               </div>
             </Card.Session>
             <Zones
@@ -95,7 +95,7 @@ export default function ShippingSetting({ createShippingZoneApi }) {
             <Card.Session>
               <div>
                 <Button
-                  title="Create new shipping zone"
+                  title="Создать новую зону доставки"
                   variant="primary"
                   onAction={() => modal.openModal()}
                 />

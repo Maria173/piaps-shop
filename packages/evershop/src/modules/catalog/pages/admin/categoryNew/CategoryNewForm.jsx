@@ -24,7 +24,7 @@ export default function CategoryNewForm({ action }) {
             )
           );
         } else {
-          toast.success('Category saved successfully!');
+          toast.success('Категория успешно сохранена!');
           // Wait for 2 seconds to show the success message
           setTimeout(() => {
             // Redirect to the edit page

@@ -4,8 +4,8 @@ import { Card } from '@components/admin/cms/Card';
 
 export default function ShippingSettingMenu({ shippingSettingUrl }) {
   return (
-    <Card.Session title={<a href={shippingSettingUrl}>Shipping Setting</a>}>
-      <div>Where you ship, shipping methods and delivery fee</div>
+    <Card.Session title={<a href={shippingSettingUrl}>Настройки доставки</a>}>
+      <div>Настройте отправку, способы доставки и стоимость доставки</div>
     </Card.Session>
   );
 }

@@ -34,7 +34,7 @@ const MultiSelect = React.forwardRef((props, ref) => {
           multiple
         >
           <option value="" disabled>
-            {_('Please select')}
+            {_('Пожалуйста выберите')}
           </option>
           {options &&
             options.map(

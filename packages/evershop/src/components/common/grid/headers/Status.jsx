@@ -28,9 +28,9 @@ export default function StatusColumnHeader({ title, id, currentFilter = {} }) {
             className="form-control"
             value={current}
             options={[
-              { value: 'all', text: 'All' },
-              { value: 1, text: 'Enabled' },
-              { value: 0, text: 'Disabled' }
+              { value: 'all', text: 'Все' },
+              { value: 1, text: 'Доступный' },
+              { value: 0, text: 'Недоступный' }
             ]}
           />
         </div>

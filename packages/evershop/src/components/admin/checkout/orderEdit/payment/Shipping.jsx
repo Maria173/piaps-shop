@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 export function Shipping({ method, cost }) {
   return (
     <div className="summary-row">
-      <span>Shipping</span>
+      <span>Доставка</span>
       <div>
         <div>{method}</div>
         <div>{cost}</div>

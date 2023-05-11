@@ -3,7 +3,7 @@ import React from 'react';
 import Button from '@components/common/form/Button';
 
 export default function NewProductButton({ newProductUrl }) {
-  return <Button url={newProductUrl} title="New Product" />;
+  return <Button url={newProductUrl} title="Новый товар" />;
 }
 
 NewProductButton.propTypes = {

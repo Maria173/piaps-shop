@@ -45,7 +45,7 @@ const CurrencyQuery = `
 `;
 
 function Province({
-  selectedCountry = 'US',
+  selectedCountry = 'RU',
   selectedProvince,
   allowedCountries = [],
   fieldName = 'storeProvince'
@@ -71,8 +71,8 @@ function Province({
       type="select"
       value={selectedProvince}
       name={fieldName}
-      label="Province"
-      placeholder="Province"
+      label="Область"
+      placeholder="Область"
       validationRules={['notEmpty']}
       options={data.provinces
         .filter((p) => p.countryCode === selectedCountry)
@@ -91,7 +91,7 @@ Province.propTypes = {
 Province.defaultProps = {
   allowedCountries: [],
   fieldName: 'storeProvince',
-  selectedCountry: 'US',
+  selectedCountry: 'RU',
   selectedProvince: ''
 };
 
@@ -126,9 +126,9 @@ function Country({
       <Field
         type="select"
         value={selectedCountry}
-        label="Country"
+        label="Страна"
         name={fieldName}
-        placeholder="Country"
+        placeholder="Страна"
         onChange={onChange}
         validationRules={['notEmpty']}
         options={data.countries.map((c) => ({ value: c.code, text: c.name }))}
@@ -203,8 +203,8 @@ function Currency({ selectedCurrency, fieldName = 'storeCurrency' }) {
       type="select"
       value={selectedCurrency}
       name={fieldName}
-      label="Currency"
-      placeholder="Currency"
+      label="Валюта"
+      placeholder="Валюта"
       options={data.currencies.map((c) => ({ value: c.code, text: c.name }))}
     />
   );
@@ -239,7 +239,7 @@ export default function StoreSetting({
   const [selectedCountry, setSelectedCountry] = React.useState(() => {
     const country = storeCountry;
     if (!country) {
-      return 'US';
+      return 'RU';
     } else {
       return country;
     }
@@ -265,64 +265,64 @@ export default function StoreSetting({
             }}
           >
             <Card>
-              <Card.Session title="Store Information">
+              <Card.Session title="Информация о магазине">
                 <Field
                   name="storeName"
-                  label="Store Name"
-                  placeholder="Store Name"
+                  label="Название магазина"
+                  placeholder="Название магазина"
                   value={storeName}
                   type="text"
                 />
                 <Field
                   name="storeDescription"
-                  label="Store Description"
-                  placeholder="Store Description"
+                  label="Описание"
+                  placeholder="Описание"
                   value={storeDescription}
                   type="textarea"
                 />
                 <Timezone selectedTimeZone={storeTimeZone} />
               </Card.Session>
-              <Card.Session title="Contact Information">
+              <Card.Session title="Контакты">
                 <div className="grid grid-cols-2 gap-2 mt-2">
                   <div>
                     <Field
                       name="storePhoneNumber"
-                      label="Store Phone Number"
+                      label="Номер телефона"
                       value={storePhoneNumber}
-                      placeholder="Store Phone Number"
+                      placeholder="Номер телефона"
                       type="text"
                     />
                   </div>
                   <div>
                     <Field
                       name="storeEmail"
-                      label="Store Email"
+                      label="Email магазина"
                       value={storeEmail}
-                      placeholder="Store Email"
+                      placeholder="Email магазина"
                       type="text"
                     />
                   </div>
                 </div>
               </Card.Session>
-              <Card.Session title="Address">
+              <Card.Session title="Адрес">
                 <Country
                   selectedCountry={storeCountry}
                   setSelectedCountry={setSelectedCountry}
                 />
                 <Field
                   name="storeAddress"
-                  label="Address"
+                  label="Адрес"
                   value={storeAddress}
-                  placeholder="Store Address"
+                  placeholder="Адрес магазина"
                   type="text"
                 />
                 <div className="grid grid-cols-3 gap-2 mt-2">
                   <div>
                     <Field
                       name="storeCity"
-                      label="City"
+                      label="Город"
                       value={storeCity}
-                      placeholder="City"
+                      placeholder="Город"
                       type="text"
                     />
                   </div>
@@ -335,9 +335,9 @@ export default function StoreSetting({
                   <div>
                     <Field
                       name="storePostalCode"
-                      label="PostalCode"
+                      label="Индекс"
                       value={storePostalCode}
-                      placeholder="PostalCode"
+                      placeholder="Индекс"
                       type="text"
                     />
                   </div>

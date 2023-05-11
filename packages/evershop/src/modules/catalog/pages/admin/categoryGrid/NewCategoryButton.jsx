@@ -3,7 +3,7 @@ import React from 'react';
 import Button from '@components/common/form/Button';
 
 export default function NewCategoryButton({ newCateoryUrl }) {
-  return <Button url={newCateoryUrl} title="New Category" />;
+  return <Button url={newCateoryUrl} title="Новая категория" />;
 }
 
 NewCategoryButton.propTypes = {

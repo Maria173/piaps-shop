@@ -18,7 +18,7 @@ export default function PaypalPayment({
       <Card.Session>
         <div className="grid grid-cols-3 gap-2">
           <div className="col-span-1 items-center flex">
-            <h4>Enable?</h4>
+            <h4>Активировать?</h4>
           </div>
           <div className="col-span-2">
             <Toggle name="paypalPaymentStatus" value={paypalPaymentStatus} />
@@ -28,13 +28,13 @@ export default function PaypalPayment({
       <Card.Session>
         <div className="grid grid-cols-3 gap-2">
           <div className="col-span-1 items-center flex">
-            <h4>Dislay Name</h4>
+            <h4>Отобразить название</h4>
           </div>
           <div className="col-span-2">
             <Field
               type="text"
               name="paypalDislayName"
-              placeholder="Dislay Name"
+              placeholder="Отобразить название"
               value={paypalDislayName}
             />
           </div>
@@ -43,13 +43,13 @@ export default function PaypalPayment({
       <Card.Session>
         <div className="grid grid-cols-3 gap-2">
           <div className="col-span-1 items-center flex">
-            <h4>Client ID</h4>
+            <h4>ID Клиента</h4>
           </div>
           <div className="col-span-2">
             <Field
               type="text"
               name="paypalClientId"
-              placeholder="Publishable Key"
+              placeholder="Общедоступный ключ"
               value={paypalClientId}
             />
           </div>
@@ -58,13 +58,13 @@ export default function PaypalPayment({
       <Card.Session>
         <div className="grid grid-cols-3 gap-2">
           <div className="col-span-1 items-center flex">
-            <h4>Client Secret</h4>
+            <h4>Секрет клиента</h4>
           </div>
           <div className="col-span-2">
             <Field
               type="text"
               name="paypalClientSecret"
-              placeholder="Secret Key"
+              placeholder="Секретный ключ"
               value={paypalClientSecret}
             />
           </div>
@@ -73,13 +73,13 @@ export default function PaypalPayment({
       <Card.Session>
         <div className="grid grid-cols-3 gap-2">
           <div className="col-span-1 items-center flex">
-            <h4>Environment</h4>
+            <h4>Среда</h4>
           </div>
           <div className="col-span-2">
             <Field
               type="radio"
               name="paypalEnvironment"
-              placeholder="Environment"
+              placeholder="Среда"
               value={paypalEnvironment}
               options={[
                 {

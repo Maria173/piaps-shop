@@ -24,7 +24,7 @@ export default function AttributeNewForm({ action }) {
             )
           );
         } else {
-          toast.success('Attribute saved successfully!');
+          toast.success('Атрибут успешно сохранен!');
           // Wait for 2 seconds to show the success message
           setTimeout(() => {
             // Redirect to the edit page

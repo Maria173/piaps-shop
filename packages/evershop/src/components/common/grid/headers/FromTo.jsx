@@ -38,7 +38,7 @@ export default function FromToColumnHeader({ title, id, currentFilters = [] }) {
               type="text"
               ref={filterFrom}
               onKeyPress={(e) => onKeyPress(e)}
-              placeholder="From"
+              placeholder="От"
               className="form-control"
             />
           </div>
@@ -47,7 +47,7 @@ export default function FromToColumnHeader({ title, id, currentFilters = [] }) {
               type="text"
               ref={filterTo}
               onKeyPress={(e) => onKeyPress(e)}
-              placeholder="To"
+              placeholder="До"
               className="form-control"
             />
           </div>
