@@ -131,7 +131,7 @@ export function PriceFilter({
 
   return (
     <div className="price-filter">
-      <div className="filter-item-title">Price</div>
+      <div className="filter-item-title">Цена</div>
       <div className="rangeslider">
         <input
           className="min"
@@ -151,7 +151,7 @@ export function PriceFilter({
               }% + 3px)`
             }}
           />
-          <output>{f}</output>
+          <output>{f.slice(1) + '₽'}</output>
         </div>
         <input
           className="max"
@@ -171,7 +171,7 @@ export function PriceFilter({
               }% - 6px)`
             }}
           />
-          <output>{t}</output>
+          <output>{t.slice(1) + '₽'}</output>
         </div>
       </div>
     </div>

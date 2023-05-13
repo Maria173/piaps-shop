@@ -161,7 +161,7 @@ exports.createOrder = async function createOrder(cart) {
     await insert('order_activity')
       .given({
         order_activity_order_id: order.insertId,
-        comment: 'Order created',
+        comment: 'Заказ создан',
         customer_notified: 0 // TODO: check config of SendGrid
       })
       .execute(connection);

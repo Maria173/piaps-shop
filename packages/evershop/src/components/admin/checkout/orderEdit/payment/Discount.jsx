@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 export function Discount({ discount, code }) {
   return (
     <div className="summary-row">
-      <span>Discount</span>
+      <span>Скидка</span>
       <div>
         <div>{code}</div>
         <div>{discount}</div>

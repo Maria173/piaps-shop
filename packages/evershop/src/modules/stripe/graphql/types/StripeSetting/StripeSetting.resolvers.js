@@ -23,7 +23,7 @@ module.exports = {
       if (stripeDislayName) {
         return stripeDislayName.value;
       } else {
-        return 'Credit Card';
+        return 'Кредитная карта';
       }
     },
     stripePublishableKey: (setting) => {

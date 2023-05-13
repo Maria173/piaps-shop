@@ -12,7 +12,7 @@ export function Transactions({ transactions }) {
   return (
     <div className="flex justify-between">
       <div className="self-center">
-        <span>Paid by customer</span>
+        <span>Оплачено клиентом</span>
       </div>
       <div className="self-center">
         <span>{paidAmount || 0}</span>

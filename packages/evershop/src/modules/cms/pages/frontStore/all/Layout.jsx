@@ -113,7 +113,7 @@ export default function Layout() {
           </div>
           <div className="self-center">
             <div className="copyright text-center md:text-right text-textSubdued">
-              <span>Copyright © 2020 UlskMerch</span>
+              <span>Copyright © 2023 UlskMerch</span>
             </div>
           </div>
         </div>

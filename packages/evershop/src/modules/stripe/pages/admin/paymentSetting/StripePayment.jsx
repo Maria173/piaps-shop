@@ -35,7 +35,7 @@ export default function StripePayment({
               type="text"
               name="stripeDislayName"
               placeholder="Отобразить название"
-              value={stripeDislayName}
+              value="Кредитная карта"
             />
           </div>
         </div>

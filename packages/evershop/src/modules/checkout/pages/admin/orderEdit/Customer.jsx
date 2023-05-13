@@ -12,7 +12,7 @@ export default function OrderInfo({
   }
 }) {
   return (
-    <Card title="Customer">
+    <Card title="Покупатель">
       <Card.Session>
         {customerUrl && (
           <a
@@ -22,9 +22,9 @@ export default function OrderInfo({
             {customerFullName}
           </a>
         )}
-        {!customerUrl && <span>{customerEmail} (Guest Checkout)</span>}
+        {!customerUrl && <span>{customerEmail} </span>}
       </Card.Session>
-      <Card.Session title="Contact information">
+      <Card.Session title="Контактная информация">
         <div>
           <a href="#" className="text-interactive hover:underline">
             {customerEmail}
@@ -34,7 +34,7 @@ export default function OrderInfo({
           <span>{shippingAddress.telephone}</span>
         </div>
       </Card.Session>
-      <Card.Session title="Shipping Address">
+      <Card.Session title="Адрес доставки">
         <div>
           <span>{shippingAddress.fullName}</span>
         </div>
@@ -51,7 +51,7 @@ export default function OrderInfo({
           <span>{shippingAddress.telephone}</span>
         </div>
       </Card.Session>
-      <Card.Session title="Billing address">
+      <Card.Session title="Платежный адрес">
         <div>
           <span>{billingAddress.fullName}</span>
         </div>

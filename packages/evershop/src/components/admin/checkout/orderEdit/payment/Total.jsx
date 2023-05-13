@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 export function Total({ total }) {
   return (
     <div className="summary-row">
-      <span>Total</span>
+      <span>Итог</span>
       <div>
         <span />
         <div>{total}</div>

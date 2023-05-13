@@ -5,7 +5,7 @@ import { _ } from '@evershop/evershop/src/lib/locale/translate';
 export function Tax({ taxClass, amount }) {
   return (
     <div className="summary-row">
-      <span>{_('Tax')}</span>
+      <span>{_('Налог')}</span>
       <div>
         <div>{taxClass}</div>
         <div>{amount}</div>

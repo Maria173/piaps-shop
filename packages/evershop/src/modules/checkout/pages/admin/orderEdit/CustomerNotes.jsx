@@ -5,7 +5,7 @@ import { Card } from '@components/admin/cms/Card';
 
 export default function CustomerNotes({ order: { shippingNote } }) {
   return (
-    <Card title="Customer notes">
+    <Card title="Примечание для покупателя">
       <Card.Session>
         <Area
           id="orderEditCustomerNotes"
@@ -17,7 +17,7 @@ export default function CustomerNotes({ order: { shippingNote } }) {
                   <div>
                     {shippingNote || (
                       <span className="text-border">
-                        No notes from customer
+                        Нет примечаний
                       </span>
                     )}
                   </div>
