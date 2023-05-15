@@ -21,7 +21,7 @@ function Group({ group }) {
   return (
     <Card.Session title="Group">
       <div>
-        <span>{group?.groupName || 'Default'}</span>
+        <span>{group?.groupName || 'По умолчанию'}</span>
       </div>
     </Card.Session>
   );

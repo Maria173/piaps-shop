@@ -42,7 +42,7 @@ export default function GroupHeader({ id, currentFilters = [] }) {
     <th className="column">
       <div className="table-header status-header">
         <div className="title" style={{ marginBottom: '1rem' }}>
-          <span>Attribute Group</span>
+          <span>Группа атрибута</span>
         </div>
         <div className="filter">
           {fetching && <div>Loading</div>}
@@ -52,7 +52,7 @@ export default function GroupHeader({ id, currentFilters = [] }) {
               onChange={(e) => onChange(e)}
               className="form-control"
               value={current}
-              options={[{ value: 'all', text: 'All' }].concat(data.groups)}
+              options={[{ value: 'all', text: 'Все' }].concat(data.groups)}
             />
           )}
         </div>

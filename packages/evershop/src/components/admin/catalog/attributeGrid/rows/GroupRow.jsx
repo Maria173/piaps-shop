@@ -45,12 +45,12 @@ export default function GroupRow({ groups }) {
         </div>
       ),
       primaryAction: {
-        title: 'Cancel',
+        title: 'Отмена',
         onAction: closeAlert,
         variant: 'critical'
       },
       secondaryAction: {
-        title: 'Save',
+        title: 'Сохранить',
         onAction: () => {
           dispatchAlert({
             type: 'update',

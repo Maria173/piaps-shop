@@ -40,7 +40,7 @@ export default function AdminUser({ adminUser, logoutUrl, loginPage }) {
             <div className="logout bg-background shadow p-2">
               <div>
                 <div>
-                  Hello <span className="text-primary">{fullName}!</span>
+                  Здравствуйте, <span className="text-primary">{fullName}!</span>
                 </div>
                 <div className="mt-1">
                   <a
@@ -51,7 +51,7 @@ export default function AdminUser({ adminUser, logoutUrl, loginPage }) {
                       logout();
                     }}
                   >
-                    Logout
+                    Выйти
                   </a>
                 </div>
               </div>

@@ -45,7 +45,7 @@ export default function Activities({ order: { activities = [] } }) {
 
   return (
     <div className="order-activities">
-      <h3 className="title">Activities</h3>
+      <h3 className="title">Активность</h3>
       <ul>
         {dailyActivities.map((group, i) => (
           <li key={i} className="group">
@@ -58,7 +58,7 @@ export default function Activities({ order: { activities = [] } }) {
                     <span>{a.comment}</span>
                     {parseInt(a.customerNotified, 10) === 1 && (
                       <span className="customer-notified">
-                        Customer was notified
+                        Клиент был уведомлен
                       </span>
                     )}
                   </div>

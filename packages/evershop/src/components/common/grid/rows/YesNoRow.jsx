@@ -6,8 +6,8 @@ export default function YesNoRow({ id, areaProps }) {
     <td>
       <div className="nodejscart-switch">
         <div>
-          {parseInt(areaProps.row[id], 10) === 0 && <span>No</span>}
-          {parseInt(areaProps.row[id], 10) === 1 && <span>Yes</span>}
+          {parseInt(areaProps.row[id], 10) === 0 && <span>Нет</span>}
+          {parseInt(areaProps.row[id], 10) === 1 && <span>Да</span>}
         </div>
       </div>
     </td>

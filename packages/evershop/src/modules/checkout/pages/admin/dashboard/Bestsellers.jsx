@@ -7,7 +7,7 @@ import './Bestsellers.scss';
 
 export default function BestSellers({ api, listUrl }) {
   const context = useAppState();
-  const currency = context.currency || 'USD';
+  const currency = context.currency || 'RUB';
   const [products, setProducts] = React.useState([]);
   const [fetching, setFetching] = React.useState(true);
 
@@ -31,7 +31,7 @@ export default function BestSellers({ api, listUrl }) {
   }, []);
   if (fetching) {
     return (
-      <Card title="Best Sellers">
+      <Card title="Лучше всего продается">
         <div className="skeleton-wrapper-bestsellers">
           <div className="skeleton" />
           <div className="skeleton" />
@@ -44,10 +44,10 @@ export default function BestSellers({ api, listUrl }) {
   } else {
     return (
       <Card
-        title="Best Sellers"
+        title="Лучше всего продается"
         actions={[
           {
-            name: 'All products',
+            name: 'Все товары',
             onAction: () => {
               window.location.href = listUrl;
             }
@@ -60,7 +60,7 @@ export default function BestSellers({ api, listUrl }) {
               {products.length === 0 && (
                 <tr>
                   <td align="left">
-                    Look like you just started. No bestsellers yet.
+                    Лучших товаров пока нет.
                   </td>
                   <td> </td>
                 </tr>
@@ -113,7 +113,7 @@ export default function BestSellers({ api, listUrl }) {
                       </a>
                     </td>
                     <td>{formatedPrice}</td>
-                    <td>{p.qty} solded</td>
+                    <td>{p.qty} продано</td>
                   </tr>
                 );
               })}

@@ -19,7 +19,7 @@ export default function FormContent({ gridUrl }) {
       </div>
       <div className="form-submit-button flex border-t border-divider mt-15 pt-15 justify-between">
         <Button
-          title="Cancel"
+          title="Отмена"
           variant="critical"
           outline
           onAction={() => {
@@ -27,7 +27,7 @@ export default function FormContent({ gridUrl }) {
           }}
         />
         <Button
-          title="Save"
+          title="Сохранить"
           onAction={() => {
             document
               .getElementById('attributeForm')

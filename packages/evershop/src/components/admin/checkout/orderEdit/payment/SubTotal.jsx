@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 export function SubTotal({ count, total }) {
   return (
     <div className="summary-row">
-      <span>Subtotal</span>
+      <span>Промежуточный итог</span>
       <div>
-        <div>{count} items</div>
+        <div>{count} позиций</div>
         <div>{total}</div>
       </div>
     </div>

@@ -7,7 +7,7 @@ module.exports = {
       if (storeName) {
         return storeName.value;
       } else {
-        return 'An Amazing EverShop Store';
+        return 'UlskMerch Store';
       }
     },
     storeDescription: (setting) => {
@@ -17,7 +17,7 @@ module.exports = {
       if (storeDescription) {
         return storeDescription.value;
       } else {
-        return 'An Amazing EverShop Store';
+        return 'UlskMerch Store';
       }
     },
     storeLanguage: () => {
@@ -31,7 +31,7 @@ module.exports = {
       if (storeTimeZone) {
         return storeTimeZone.value;
       } else {
-        return 'America/New_York';
+        return 'Europe/Samara';
       }
     },
     storePhoneNumber: (setting) => {
@@ -57,7 +57,7 @@ module.exports = {
       if (storeCountry) {
         return storeCountry.value;
       } else {
-        return 'US';
+        return 'RU';
       }
     },
     storeAddress: (setting) => {

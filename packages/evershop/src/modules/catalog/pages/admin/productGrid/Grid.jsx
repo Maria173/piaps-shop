@@ -50,18 +50,18 @@ function Actions({ products = [], selectedIds = [] }) {
 
   const actions = [
     {
-      name: 'Disable',
+      name: 'Отключить',
       onAction: () => {
         openAlert({
-          heading: `Disable ${selectedIds.length} products`,
-          content: 'Are you sure?',
+          heading: `Отключить ${selectedIds.length} продукт`,
+          content: 'Вы уверены?',
           primaryAction: {
-            title: 'Cancel',
+            title: 'Отмена',
             onAction: closeAlert,
             variant: 'primary'
           },
           secondaryAction: {
-            title: 'Disable',
+            title: 'Отключить',
             onAction: async () => {
               await updateProducts(0);
             },
@@ -72,18 +72,18 @@ function Actions({ products = [], selectedIds = [] }) {
       }
     },
     {
-      name: 'Enable',
+      name: 'Включить',
       onAction: () => {
         openAlert({
-          heading: `Enable ${selectedIds.length} products`,
-          content: 'Are you sure?',
+          heading: `Включить ${selectedIds.length} продукт`,
+          content: 'Вы уверены?',
           primaryAction: {
-            title: 'Cancel',
+            title: 'Отмена',
             onAction: closeAlert,
             variant: 'primary'
           },
           secondaryAction: {
-            title: 'Enable',
+            title: 'Включить',
             onAction: async () => {
               await updateProducts(1);
             },
@@ -94,18 +94,18 @@ function Actions({ products = [], selectedIds = [] }) {
       }
     },
     {
-      name: 'Delete',
+      name: 'Удалить',
       onAction: () => {
         openAlert({
-          heading: `Delete ${selectedIds.length} products`,
+          heading: `Удалить ${selectedIds.length} продукт`,
           content: <div>Can&apos;t be undone</div>,
           primaryAction: {
-            title: 'Cancel',
+            title: 'Отмена',
             onAction: closeAlert,
             variant: 'primary'
           },
           secondaryAction: {
-            title: 'Delete',
+            title: 'Удалить',
             onAction: async () => {
               await deleteProducts();
             },
@@ -124,7 +124,7 @@ function Actions({ products = [], selectedIds = [] }) {
         <td style={{ borderTop: 0 }} colSpan="100">
           <div className="inline-flex border border-divider rounded justify-items-start">
             <a href="#" className="font-semibold pt-075 pb-075 pl-15 pr-15">
-              {selectedIds.length} selected
+              {selectedIds.length} выбрано
             </a>
             {actions.map((action) => (
               <a
@@ -196,7 +196,7 @@ export default function ProductGrid({
                   component: {
                     default: () => (
                       <BasicColumnHeader
-                        title="Product Name"
+                        title="Название товара"
                         id="name"
                         currentFilters={currentFilters}
                       />
@@ -209,7 +209,7 @@ export default function ProductGrid({
                     default: () => (
                       <FromToColumnHeader
                         id="price"
-                        title="Price"
+                        title="Цена"
                         currentFilters={currentFilters}
                       />
                     )
@@ -220,7 +220,7 @@ export default function ProductGrid({
                   component: {
                     default: () => (
                       <BasicColumnHeader
-                        title="SKU"
+                        title="Артикул"
                         id="sku"
                         currentFilters={currentFilters}
                       />
@@ -232,7 +232,7 @@ export default function ProductGrid({
                   component: {
                     default: () => (
                       <BasicColumnHeader
-                        title="Qty"
+                        title="Кол-во"
                         id="qty"
                         currentFilters={currentFilters}
                       />
@@ -245,11 +245,11 @@ export default function ProductGrid({
                     default: () => (
                       <DropdownColumnHeader
                         id="status"
-                        title="Status"
+                        title="Статус"
                         currentFilters={currentFilters}
                         options={[
-                          { value: 1, text: 'Enabled' },
-                          { value: 0, text: 'Disabled' }
+                          { value: 1, text: 'Доступный' },
+                          { value: 0, text: 'Недоступный' }
                         ]}
                       />
                     )
@@ -350,7 +350,7 @@ export default function ProductGrid({
       </table>
       {products.length === 0 && (
         <div className="flex w-full justify-center">
-          There is no product to display
+          Товара для отображения нет
         </div>
       )}
       <Pagination total={total} limit={limit} page={page} />

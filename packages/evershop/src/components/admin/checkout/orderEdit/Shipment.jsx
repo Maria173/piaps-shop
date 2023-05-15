@@ -64,12 +64,12 @@ function Actions({ status, startShipUrl, completeShipUrl }) {
     <td>
       {status === 'pending' && (
         <a href="#" onClick={(e) => startShipment(e)}>
-          <span>Start shipment</span>
+          <span>Начать отгрузку</span>
         </a>
       )}
       {status === 'delivering' && (
         <a href="#" onClick={(e) => completeShipment(e)}>
-          <span>Complete shipment</span>
+          <span>Завершить отгрузку</span>
         </a>
       )}
     </td>
@@ -114,31 +114,31 @@ export default function Shipment({
                 coreComponents={[
                   {
                     component: { default: 'th' },
-                    props: { children: <span>Status</span> },
+                    props: { children: <span>Статус</span> },
                     sortOrder: 10,
                     id: 'shipment_status_header'
                   },
                   {
                     component: { default: 'th' },
-                    props: { children: <span>Method</span> },
+                    props: { children: <span>Метод</span> },
                     sortOrder: 20,
                     id: 'shipment_method_header'
                   },
                   {
                     component: { default: 'th' },
-                    props: { children: <span>Total weight</span> },
+                    props: { children: <span>Общий вес</span> },
                     sortOrder: 30,
                     id: 'shipment_weight_header'
                   },
                   {
                     component: { default: 'th' },
-                    props: { children: <span>Customer notes</span> },
+                    props: { children: <span>Примечание для покупателя</span> },
                     sortOrder: 40,
                     id: 'shipment_notes_header'
                   },
                   {
                     component: { default: 'th' },
-                    props: { children: <span>Actions</span> },
+                    props: { children: <span>Действия</span> },
                     sortOrder: 50,
                     id: 'shipment_action_header'
                   }

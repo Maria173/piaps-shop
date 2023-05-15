@@ -14,11 +14,11 @@ export function FullfillButton({ shipment, createShipmentApi }) {
   } else {
     return (
       <Button
-        title="Fullfill items"
+        title="Выполнить"
         variant="primary"
         onAction={() => {
           openAlert({
-            heading: 'Fullfill items',
+            heading: 'Выполнить',
             content: (
               <div>
                 <Form
@@ -44,8 +44,8 @@ export function FullfillButton({ shipment, createShipmentApi }) {
                         formId="fullfill-items"
                         type="text"
                         name="tracking_number"
-                        label="Tracking number"
-                        placeHolder="Tracking number"
+                        label="Трек-номер"
+                        placeHolder="Трек-номер"
                         value=""
                         validationRules={['notEmpty']}
                       />
@@ -55,12 +55,12 @@ export function FullfillButton({ shipment, createShipmentApi }) {
                         formId="fullfill-items"
                         type="select"
                         name="carrier_name"
-                        label="Carrier"
+                        label="Курьер"
                         value=""
                         options={[
-                          { value: 'Fedex', text: 'Fedex' },
-                          { value: 'USPS', text: 'USPS' },
-                          { value: 'UPS', text: 'UPS' }
+                          { value: 'Fedex', text: 'Почта' },
+                          { value: 'USPS', text: 'СДЭК' },
+                          { value: 'UPS', text: 'Деловые линии' }
                         ]} // TODO: List of carrier should be configurable
                         validationRules={['notEmpty']}
                       />
@@ -70,12 +70,12 @@ export function FullfillButton({ shipment, createShipmentApi }) {
               </div>
             ),
             primaryAction: {
-              title: 'Cancel',
+              title: 'Отмена',
               onAction: closeAlert,
               variant: ''
             },
             secondaryAction: {
-              title: 'Fullfill',
+              title: 'Выполнить',
               onAction: () => {
                 dispatchAlert({
                   type: 'update',

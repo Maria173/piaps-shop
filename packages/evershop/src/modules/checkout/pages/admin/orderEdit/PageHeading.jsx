@@ -4,7 +4,7 @@ import PageHeading from '@components/admin/cms/PageHeading';
 
 export default function OrderEditPageHeading({ backUrl, order }) {
   return (
-    <PageHeading backUrl={backUrl} heading={`Editing #${order.orderNumber}`} />
+    <PageHeading backUrl={backUrl} heading={`Редактировать #${order.orderNumber}`} />
   );
 }
 

@@ -37,7 +37,7 @@ export function Category({ product }) {
 
   return (
     <div>
-      <div className="mb-1">Category</div>
+      <div className="mb-1">Категория</div>
       <Select
         name="categories[]"
         options={data.categories.items}
@@ -72,16 +72,16 @@ Category.defaultProps = {
 
 export default function Status({ product }) {
   return (
-    <Card title="Product status" subdued>
+    <Card title="Статус товара" subdued>
       <Card.Session>
         <Field
           id="status"
           name="status"
           value={product?.status}
-          label="Status"
+          label="Статус"
           options={[
-            { value: 0, text: 'Disabled' },
-            { value: 1, text: 'Enabled' }
+            { value: 0, text: 'Недоступный' },
+            { value: 1, text: 'Доступный' }
           ]}
           type="radio"
         />
@@ -91,10 +91,10 @@ export default function Status({ product }) {
           id="visibility"
           name="visibility"
           value={product?.visibility}
-          label="Visibility"
+          label="Видимость"
           options={[
-            { value: 0, text: 'Not visible' },
-            { value: 1, text: 'Visible' }
+            { value: 0, text: 'Невидимый' },
+            { value: 1, text: 'Видимый' }
           ]}
           type="radio"
         />

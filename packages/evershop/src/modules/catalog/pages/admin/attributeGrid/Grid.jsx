@@ -33,18 +33,18 @@ function Actions({ attributes = [], selectedIds = [] }) {
 
   const actions = [
     {
-      name: 'Delete',
+      name: 'Удалить',
       onAction: () => {
         openAlert({
-          heading: `Delete ${selectedIds.length} attributes`,
+          heading: `Удалить ${selectedIds.length} артрибут`,
           content: <div>Can&apos;t be undone</div>,
           primaryAction: {
-            title: 'Cancel',
+            title: 'Отмена',
             onAction: closeAlert,
             variant: 'primary'
           },
           secondaryAction: {
-            title: 'Delete',
+            title: 'Удалить',
             onAction: async () => {
               await deleteAttributes();
             },
@@ -63,7 +63,7 @@ function Actions({ attributes = [], selectedIds = [] }) {
         <td style={{ borderTop: 0 }} colSpan="100">
           <div className="inline-flex border border-divider rounded justify-items-start">
             <a href="#" className="font-semibold pt-075 pb-075 pl-15 pr-15">
-              {selectedIds.length} selected
+              {selectedIds.length} выбрано
             </a>
             {actions.map((action) => (
               <a
@@ -129,7 +129,7 @@ export default function AttributeGrid({
                     default: () => (
                       <BasicColumnHeader
                         id="name"
-                        title="Attribute Name"
+                        title="Атрибут"
                         currentFilters={currentFilters}
                       />
                     )
@@ -149,13 +149,13 @@ export default function AttributeGrid({
                     default: () => (
                       <DropdownColumnHeader
                         id="type"
-                        title="Type"
+                        title="Тип"
                         currentFilters={currentFilters}
                         options={[
-                          { value: 'text', text: 'Text' },
-                          { value: 'select', text: 'Select' },
-                          { value: 'multiselect', text: 'Multi Select' },
-                          { value: 'textarea', text: 'Text Area' }
+                          { value: 'text', text: 'Текст' },
+                          { value: 'select', text: 'Выбор' },
+                          { value: 'multiselect', text: 'Множественный выбор' },
+                          { value: 'textarea', text: 'Текстовый блок' }
                         ]}
                       />
                     )
@@ -167,11 +167,11 @@ export default function AttributeGrid({
                     default: () => (
                       <DropdownColumnHeader
                         id="isRequired"
-                        title="Is Required?"
+                        title="Требуется?"
                         currentFilters={currentFilters}
                         options={[
-                          { value: 1, text: 'Yes' },
-                          { value: 0, text: 'No' }
+                          { value: 1, text: 'Да' },
+                          { value: 0, text: 'Нет' }
                         ]}
                       />
                     )
@@ -183,11 +183,11 @@ export default function AttributeGrid({
                     default: () => (
                       <DropdownColumnHeader
                         id="isFilterable"
-                        title="Is Filterable?"
+                        title="Фильтруется?"
                         currentFilters={currentFilters}
                         options={[
-                          { value: 1, text: 'Yes' },
-                          { value: 0, text: 'No' }
+                          { value: 1, text: 'Да' },
+                          { value: 0, text: 'Нет' }
                         ]}
                       />
                     )
@@ -274,7 +274,7 @@ export default function AttributeGrid({
       </table>
       {attributes.length === 0 && (
         <div className="flex w-full justify-center">
-          There is no attribute to display
+          Нет атрибутов для отображения
         </div>
       )}
       <Pagination total={total} limit={limit} page={page} />

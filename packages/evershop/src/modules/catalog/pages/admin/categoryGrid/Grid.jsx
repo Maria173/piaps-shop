@@ -32,18 +32,18 @@ function Actions({ categories = [], selectedIds = [] }) {
 
   const actions = [
     {
-      name: 'Delete',
+      name: 'Удалить',
       onAction: () => {
         openAlert({
-          heading: `Delete ${selectedIds.length} categories`,
+          heading: `Удалить ${selectedIds.length} категорию`,
           content: <div>Can&apos;t be undone</div>,
           primaryAction: {
-            title: 'Cancel',
+            title: 'Отмена',
             onAction: closeAlert,
             variant: 'primary'
           },
           secondaryAction: {
-            title: 'Delete',
+            title: 'Удалить',
             onAction: async () => {
               await deleteCategories();
             },
@@ -62,7 +62,7 @@ function Actions({ categories = [], selectedIds = [] }) {
         <td style={{ borderTop: 0 }} colSpan="100">
           <div className="inline-flex border border-divider rounded justify-items-start">
             <a href="#" className="font-semibold pt-075 pb-075 pl-15 pr-15">
-              {selectedIds.length} selected
+              {selectedIds.length} выбрано
             </a>
             {actions.map((action, index) => (
               <a
@@ -129,7 +129,7 @@ export default function CategoryGrid({
                   component: {
                     default: () => (
                       <BasicColumnHeader
-                        title="Category Name"
+                        title="Название категории"
                         id="name"
                         currentFilters={currentFilters}
                       />
@@ -142,11 +142,11 @@ export default function CategoryGrid({
                     default: () => (
                       <DropdownColumnHeader
                         id="status"
-                        title="Status"
+                        title="Статус"
                         currentFilters={currentFilters}
                         options={[
-                          { value: 1, text: 'Enabled' },
-                          { value: 0, text: 'Disabled' }
+                          { value: 1, text: 'Доступный' },
+                          { value: 0, text: 'Недоступный' }
                         ]}
                       />
                     )
@@ -158,11 +158,11 @@ export default function CategoryGrid({
                     default: () => (
                       <DropdownColumnHeader
                         id="includeInNav"
-                        title="Include In Menu"
+                        title="Добавить в меню"
                         currentFilters={currentFilters}
                         options={[
-                          { value: 1, text: 'Yes' },
-                          { value: 0, text: 'No' }
+                          { value: 1, text: 'Да' },
+                          { value: 0, text: 'Нет' }
                         ]}
                       />
                     )
@@ -234,7 +234,7 @@ export default function CategoryGrid({
       </table>
       {categories.length === 0 && (
         <div className="flex w-full justify-center">
-          There is no category to display
+          Нет категории для отображения
         </div>
       )}
       <Pagination total={total} limit={limit} page={page} />

@@ -2,7 +2,7 @@
   "shop" : {
     "currency": "RUB",
     "language": "ru",
-    "weightUnit": "kg"
+    "weightUnit": "кг"
   },
   "catalog": {
     "product": {
@@ -37,13 +37,13 @@
   "order": {
     "shipmentStatus": [
       {
-        "name": "Unfullfilled",
+        "name": "Невыполненный",
         "code": "unfullfilled",
         "badge": "warning",
         "progress": "incomplete"
       },
       {
-        "name": "Fullfilled",
+        "name": "Выполенный",
         "code": "fullfilled",
         "badge": "success",
         "progress": "complete"
@@ -51,19 +51,19 @@
     ],
     "paymentStatus": [
       {
-        "name": "Pending",
+        "name": "Ожидает",
         "code": "pending",
         "badge": "default",
         "progress": "incomplete"
       },
       {
-        "name": "Paid",
+        "name": "Оплачен",
         "code": "paid",
         "badge": "success",
         "progress": "complete"
       },
       {
-        "name": "Refunded",
+        "name": "Возвращено",
         "code": "refunded",
         "badge": "critical",
         "progress": "complete"

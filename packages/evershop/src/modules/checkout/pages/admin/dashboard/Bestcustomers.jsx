@@ -5,7 +5,7 @@ import { Card } from '@components/admin/cms/Card';
 
 export default function BestCustomers({ listUrl }) {
   const context = useAppState();
-  const currency = context.currency || 'USD';
+  const currency = context.currency || 'RUB';
   const customers = context.bestCustomers || [];
 
   return (

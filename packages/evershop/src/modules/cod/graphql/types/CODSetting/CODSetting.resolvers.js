@@ -15,7 +15,7 @@ module.exports = {
       if (codDislayName) {
         return codDislayName.value;
       } else {
-        return 'Cash On Delivery';
+        return 'Наложенный платеж';
       }
     }
   }

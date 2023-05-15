@@ -18,7 +18,7 @@ export default function StripePayment({
       <Card.Session>
         <div className="grid grid-cols-3 gap-2">
           <div className="col-span-1 items-center flex">
-            <h4>Enable?</h4>
+            <h4>Активировать?</h4>
           </div>
           <div className="col-span-2">
             <Toggle name="stripePaymentStatus" value={stripePaymentStatus} />
@@ -28,14 +28,14 @@ export default function StripePayment({
       <Card.Session>
         <div className="grid grid-cols-3 gap-2">
           <div className="col-span-1 items-center flex">
-            <h4>Dislay Name</h4>
+            <h4>Отобразить название</h4>
           </div>
           <div className="col-span-2">
             <Field
               type="text"
               name="stripeDislayName"
-              placeholder="Dislay Name"
-              value={stripeDislayName}
+              placeholder="Отобразить название"
+              value="Кредитная карта"
             />
           </div>
         </div>
@@ -43,13 +43,13 @@ export default function StripePayment({
       <Card.Session>
         <div className="grid grid-cols-3 gap-2">
           <div className="col-span-1 items-center flex">
-            <h4>Publishable Key</h4>
+            <h4>Доступный для публикации ключ</h4>
           </div>
           <div className="col-span-2">
             <Field
               type="text"
               name="stripePublishableKey"
-              placeholder="Publishable Key"
+              placeholder="Доступный для публикации ключ"
               value={stripePublishableKey}
             />
           </div>
@@ -58,13 +58,13 @@ export default function StripePayment({
       <Card.Session>
         <div className="grid grid-cols-3 gap-2">
           <div className="col-span-1 items-center flex">
-            <h4>Secret Key</h4>
+            <h4>Секретный ключ</h4>
           </div>
           <div className="col-span-2">
             <Field
               type="text"
               name="stripeSecretKey"
-              placeholder="Secret Key"
+              placeholder="Секретный ключ"
               value={stripeSecretKey}
             />
           </div>
@@ -73,13 +73,13 @@ export default function StripePayment({
       <Card.Session>
         <div className="grid grid-cols-3 gap-2">
           <div className="col-span-1 items-center flex">
-            <h4>Webhook Secret Key</h4>
+            <h4>Секретный ключ Webhook</h4>
           </div>
           <div className="col-span-2">
             <Field
               type="text"
               name="stripeEndpointSecret"
-              placeholder="Secret Key"
+              placeholder="Секретный ключ"
               value={stripeEndpointSecret}
             />
           </div>

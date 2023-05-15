@@ -12,7 +12,7 @@ export default function Seo({ category }) {
       props: {
         id: 'urlKey',
         name: 'url_key',
-        label: 'Url key',
+        label: 'Url ключ',
         validationRules: ['notEmpty'],
         type: 'text'
       },
@@ -23,7 +23,7 @@ export default function Seo({ category }) {
       props: {
         id: 'metaTitle',
         name: 'meta_title',
-        label: 'Meta title',
+        label: 'Meta заголовок',
         type: 'text'
       },
       sortOrder: 10
@@ -33,7 +33,7 @@ export default function Seo({ category }) {
       props: {
         id: 'metakeywords',
         name: 'meta_keywords',
-        label: 'Meta keywords',
+        label: 'Meta ключевые слова',
         type: 'text'
       },
       sortOrder: 20
@@ -43,10 +43,10 @@ export default function Seo({ category }) {
       props: {
         id: 'metaDescription',
         name: 'meta_description',
-        label: 'Meta description',
+        label: 'Meta описание',
         options: [
-          { value: 0, text: 'Disabled' },
-          { value: 1, text: 'Enabled' }
+          { value: 0, text: 'Недоступный' },
+          { value: 1, text: 'Доступный' }
         ],
         type: 'textarea'
       },
@@ -61,7 +61,7 @@ export default function Seo({ category }) {
   });
 
   return (
-    <Card title="Search engine optimize">
+    <Card title="Оптимизация поисковой системы">
       <Card.Session>
         <Area id="categoryEditSeo" coreComponents={fields} />
       </Card.Session>

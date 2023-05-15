@@ -98,10 +98,10 @@ export default function Products({
   if (data || fetching) {
     return (
       <Card
-        title="Products"
+        title="Товары"
         actions={[
           {
-            name: 'Add products',
+            name: 'Добавить товары',
             onAction: () => {
               modal.openModal();
             }
@@ -134,18 +134,18 @@ export default function Products({
               <input
                 type="text"
                 value={name}
-                placeholder="Search products"
+                placeholder="Найти товары"
                 onChange={(e) => setName(e.target.value)}
               />
             </div>
             {data && (
               <>
                 {data.category.products.items.length === 0 && (
-                  <div>No product to display.</div>
+                  <div>Нет товаров для отображения.</div>
                 )}
                 <div className="flex justify-between">
                   <div>
-                    <i>{data.category.products.total} items</i>
+                    <i>{data.category.products.total} позиций</i>
                   </div>
                   <div>
                     {data.category.products.total > 10 && (
@@ -159,7 +159,7 @@ export default function Products({
                               setPage(page - 1);
                             }}
                           >
-                            Previous
+                            Предыдущая
                           </a>
                         )}
                         {page < data.category.products.total / 10 && (
@@ -171,7 +171,7 @@ export default function Products({
                               setPage(page + 1);
                             }}
                           >
-                            Next
+                            Следующая
                           </a>
                         )}
                       </div>
@@ -232,7 +232,7 @@ export default function Products({
                             }}
                             className="text-critical hover:first-letter:"
                           >
-                            Remove
+                            Удалить
                           </a>
                         </div>
                       </div>

@@ -147,7 +147,7 @@ export default function SearchBox({ searchAPI, resourceLinks }) {
           )}
           {!InputRef.current.value && (
             <div className="text-center">
-              <span>Search for products, order and other resources</span>
+              <span></span>
             </div>
           )}
           {results.length === 0 &&

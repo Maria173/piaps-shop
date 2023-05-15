@@ -24,7 +24,7 @@ export default function AttributeEditForm({ action }) {
             )
           );
         } else {
-          toast.success('Attribute saved successfully!');
+          toast.success('Атрибут успешно сохранен!');
         }
       }}
       submitBtn={false}

@@ -4,8 +4,8 @@ import { Card } from '@components/admin/cms/Card';
 
 export default function StoreSettingMenu({ storeSettingUrl }) {
   return (
-    <Card.Session title={<a href={storeSettingUrl}>Store Setting</a>}>
-      <div>Configure your store information</div>
+    <Card.Session title={<a href={storeSettingUrl}>Настройки магазина</a>}>
+      <div>Настройте информацию о магазине</div>
     </Card.Session>
   );
 }

@@ -34,7 +34,7 @@ function ZoneForm({
   }, [country]);
 
   return (
-    <Card title="Create a shipping zone">
+    <Card title="Создать зону доставки">
       <Form
         id="createShippingZone"
         method={method || 'POST'}
@@ -45,16 +45,16 @@ function ZoneForm({
           closeModal();
         }}
       >
-        <Card.Session title="Zone name">
+        <Card.Session title="Название">
           <Field
             name="name"
             type="text"
-            placeholder="Enter zone name"
+            placeholder="Введите название"
             validationRules={['notEmpty']}
             value={zone?.name}
           />
         </Card.Session>
-        <Card.Session title="Country">
+        <Card.Session title="Страна">
           <Select
             name="country"
             options={countries}
@@ -66,11 +66,11 @@ function ZoneForm({
                 countries.find((c) => c.value === e.value)?.provinces
               );
             }}
-            aria-label="Select country"
+            aria-label="Выберите страну"
             value={country}
           />
         </Card.Session>
-        <Card.Session title="Provinces/States">
+        <Card.Session title="Область">
           <Select
             name="provinces[]"
             options={provinces}
@@ -85,9 +85,9 @@ function ZoneForm({
         </Card.Session>
         <Card.Session>
           <div className="flex justify-end gap-1">
-            <Button title="Cancel" variant="secondary" onAction={closeModal} />
+            <Button title="Отмена" variant="secondary" onAction={closeModal} />
             <Button
-              title="Save"
+              title="Сохранить"
               variant="primary"
               onAction={() => {
                 document.getElementById('createShippingZone').dispatchEvent(

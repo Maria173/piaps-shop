@@ -13,8 +13,8 @@ function SKUPriceWeight({ sku, price, weight, setting }) {
           id="sku"
           name="sku"
           value={sku}
-          placeholder="SKU"
-          label="SKU"
+          placeholder="Артикул"
+          label="Артикул"
           type="text"
           validationRules={['notEmpty']}
         />
@@ -24,11 +24,11 @@ function SKUPriceWeight({ sku, price, weight, setting }) {
           id="price"
           name="price"
           value={price?.value}
-          placeholder="Price"
-          label="Price"
+          placeholder="Цена"
+          label="Цена"
           type="text"
           validationRules={['notEmpty']}
-          suffix={setting.storeCurrency}
+          suffix="RUB"
         />
       </div>
       <div>
@@ -36,11 +36,11 @@ function SKUPriceWeight({ sku, price, weight, setting }) {
           id="weight"
           name="weight"
           value={weight?.value}
-          placeholder="Weight"
-          label="Weight"
+          placeholder="Вес"
+          label="Вес"
           type="text"
           validationRules={['notEmpty']}
-          suffix={setting.weightUnit}
+          suffix="кг"
         />
       </div>
     </div>
@@ -52,8 +52,7 @@ SKUPriceWeight.propTypes = {
   sku: PropTypes.string,
   weight: PropTypes.number,
   setting: PropTypes.shape({
-    storeCurrency: PropTypes.string,
-    weightUnit: PropTypes.string
+    storeCurrency: PropTypes.string
   }).isRequired
 };
 
@@ -72,7 +71,7 @@ export default function General({
   setting
 }) {
   return (
-    <Card title="General">
+    <Card title="Основное">
       <Card.Session>
         <Area
           id="productEditGeneral"
@@ -82,11 +81,11 @@ export default function General({
               props: {
                 id: 'name',
                 name: 'name',
-                label: 'Name',
+                label: 'Название',
                 value: product?.name,
                 validationRules: ['notEmpty'],
                 type: 'text',
-                placeholder: 'Name'
+                placeholder: 'Название'
               },
               sortOrder: 10,
               id: 'name'
@@ -118,7 +117,7 @@ export default function General({
               props: {
                 id: 'description',
                 name: 'description',
-                label: 'Description',
+                label: 'Описание',
                 value: product?.description,
                 browserApi,
                 deleteApi,
@@ -157,8 +156,7 @@ General.propTypes = {
     })
   }),
   setting: PropTypes.shape({
-    storeCurrency: PropTypes.string,
-    weightUnit: PropTypes.string
+    storeCurrency: PropTypes.string
   }).isRequired
 };
 

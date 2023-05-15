@@ -3,18 +3,18 @@ import React from 'react';
 import Icon from '@heroicons/react/solid/esm/GiftIcon';
 import NavigationItem from '@components/admin/cms/NavigationItem';
 
-export default function NewProductQuickLink({ couponNew }) {
-  return <NavigationItem Icon={Icon} title="New Coupon" url={couponNew} />;
-}
+// export default function NewProductQuickLink({ couponNew }) {
+//   return <NavigationItem Icon={Icon} title="New Coupon" url={couponNew} />;
+// }
 
-NewProductQuickLink.propTypes = {
-  couponNew: PropTypes.string.isRequired
-};
+// NewProductQuickLink.propTypes = {
+//   couponNew: PropTypes.string.isRequired
+// };
 
-export const layout = {
-  areaId: 'quickLinks',
-  sortOrder: 30
-};
+// export const layout = {
+//   areaId: 'quickLinks',
+//   sortOrder: 30
+// };
 
 export const query = `
   query Query {

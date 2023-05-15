@@ -7,12 +7,12 @@ export default function QuickLinks({ dashboard }) {
   return (
     <NavigationItemGroup
       id="quickLinks"
-      name="Quick links"
+      name="Часто посещяемые страницы"
       items={[
         {
           Icon,
           url: dashboard,
-          title: 'Dashboard'
+          title: 'Статистика'
         }
       ]}
     />

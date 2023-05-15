@@ -19,7 +19,7 @@ export default function General({
       props: {
         id: 'name',
         name: 'name',
-        label: 'Name',
+        label: 'Название',
         validationRules: ['notEmpty'],
         type: 'text'
       },
@@ -40,7 +40,7 @@ export default function General({
       props: {
         id: 'description',
         name: 'description',
-        label: 'Description',
+        label: 'Описание',
         browserApi,
         deleteApi,
         uploadApi,
@@ -57,7 +57,7 @@ export default function General({
   });
 
   return (
-    <Card title="General">
+    <Card title="Основное">
       <Card.Session>
         <Area id="categoryEditGeneral" coreComponents={fields} />
       </Card.Session>

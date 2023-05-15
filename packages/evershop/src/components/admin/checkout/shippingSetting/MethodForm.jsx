@@ -126,7 +126,7 @@ function MethodForm({ saveMethodApi, closeModal, getZones, method }) {
   }
 
   return (
-    <Card title="Shipping method">
+    <Card title="Способ доставки">
       <Form
         id="shippingMethodForm"
         method={method ? 'PATCH' : 'POST'}
@@ -141,7 +141,7 @@ function MethodForm({ saveMethodApi, closeModal, getZones, method }) {
           }
         }}
       >
-        <Card.Session title="Method name">
+        <Card.Session title="Название способа">
           <CreatableSelect
             isClearable
             isDisabled={isLoading}
@@ -157,14 +157,14 @@ function MethodForm({ saveMethodApi, closeModal, getZones, method }) {
             value={shippingMethod?.value}
             validationRules={['notEmpty']}
           />
-          <Toggle name="is_enabled" label="Status" value={method?.isEnabled} />
+          <Toggle name="is_enabled" label="Статус" value={method?.isEnabled} />
         </Card.Session>
-        <Card.Session title="Setup shipping cost">
+        <Card.Session title="Настройка стоимости доставки">
           <Radio
             name="calculation_type"
             options={[
-              { text: 'Flat rate', value: 'flat_rate' },
-              { text: 'API calculate', value: 'api' }
+              { text: 'Фиксированная цена', value: 'flat_rate' },
+              { text: 'API калькулятор', value: 'api' }
             ]}
             defaultValue={method?.calculateApi ? 'api' : 'flat_rate'}
             value={type}
@@ -176,7 +176,7 @@ function MethodForm({ saveMethodApi, closeModal, getZones, method }) {
             <Field
               name="cost"
               type="text"
-              placeholder="Shipping cost"
+              placeholder="Стоимость доставки"
               validationRules={['notEmpty']}
               value={method?.cost?.value}
             />
@@ -185,10 +185,10 @@ function MethodForm({ saveMethodApi, closeModal, getZones, method }) {
             <Field
               name="calculate_api"
               type="text"
-              placeholder="Calculate API endpoint"
+              placeholder="Калькулятор API конечное значение"
               validationRules={['notEmpty']}
               value={method?.calculateApi}
-              instruction="This API will be called to calculate shipping cost. It supposed to return a number."
+              instruction="API рассчитает стоимость доставки."
             />
           )}
           <a
@@ -199,7 +199,7 @@ function MethodForm({ saveMethodApi, closeModal, getZones, method }) {
               hasCondition ? setHasCondition(false) : setHasCondition(true);
             }}
           >
-            {hasCondition ? 'Remove condition' : 'Add condition'}
+            {hasCondition ? 'Удалить условие' : 'Добавить условие'}
           </a>
           {!hasCondition && (
             <input name="condition_type" type="hidden" value={'none'} />
@@ -208,9 +208,9 @@ function MethodForm({ saveMethodApi, closeModal, getZones, method }) {
         </Card.Session>
         <Card.Session>
           <div className="flex justify-end gap-1">
-            <Button title="Cancel" variant="secondary" onAction={closeModal} />
+            <Button title="Отмена" variant="secondary" onAction={closeModal} />
             <Button
-              title="Save"
+              title="Сохранить"
               variant="primary"
               onAction={() => {
                 document.getElementById('shippingMethodForm').dispatchEvent(

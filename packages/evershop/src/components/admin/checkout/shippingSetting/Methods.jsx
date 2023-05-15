@@ -11,11 +11,11 @@ export function Methods({ getZones, methods, addMethodApi }) {
       <table className="border-collapse divide-y">
         <thead>
           <tr>
-            <th className="border-none">Method</th>
-            <th className="border-none">Status</th>
-            <th className="border-none">Cost</th>
-            <th className="border-none">Condition</th>
-            <th className="border-none">Action</th>
+            <th className="border-none">Метод</th>
+            <th className="border-none">Статус</th>
+            <th className="border-none">Стоимость</th>
+            <th className="border-none">Состояние</th>
+            <th className="border-none">Действие</th>
           </tr>
         </thead>
         {methods.map((method) => {
@@ -35,7 +35,7 @@ export function Methods({ getZones, methods, addMethodApi }) {
             modal.openModal();
           }}
         >
-          + Add Method
+          + Добавить метод
         </a>
       </div>
       {modal.state.showing && (

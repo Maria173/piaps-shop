@@ -36,23 +36,23 @@ function Actions({ orders = [], selectedIds = [] }) {
 
   const actions = [
     {
-      name: 'Mark as fullfilled',
+      name: 'Отметить как выполненное',
       onAction: () => {
         openAlert({
-          heading: `Fullfill ${selectedIds.length} orders`,
+          heading: `Выполнен ${selectedIds.length} заказ`,
           content: (
             <Checkbox
               name="notify_customer"
-              label="Send notification to the customer"
+              label="Отправить уведомление покупателю"
             />
           ),
           primaryAction: {
-            title: 'Cancel',
+            title: 'Отмена',
             onAction: closeAlert,
             variant: 'default'
           },
           secondaryAction: {
-            title: 'Mark as fullfilled',
+            title: 'Отметить как выполненное',
             onAction: async () => {
               await fullFillOrders();
             },
@@ -71,7 +71,7 @@ function Actions({ orders = [], selectedIds = [] }) {
         <td style={{ borderTop: 0 }} colSpan="100">
           <div className="inline-flex border border-divider rounded justify-items-start">
             <a href="#" className="font-semibold pt-075 pb-075 pl-15 pr-15">
-              {selectedIds.length} selected
+              {selectedIds.length} выбрано
             </a>
             {actions.map((action) => (
               <a
@@ -142,7 +142,7 @@ export default function OrderGrid({
                   component: {
                     default: () => (
                       <BasicColumnHeader
-                        title="Order Number"
+                        title="Номер заказа"
                         id="orderNumber"
                         currentFilters={currentFilters}
                       />
@@ -154,7 +154,7 @@ export default function OrderGrid({
                   component: {
                     default: () => (
                       <FromToColumnHeader
-                        title="Date"
+                        title="Дата"
                         id="createdAt"
                         currentFilters={currentFilters}
                       />
@@ -166,7 +166,7 @@ export default function OrderGrid({
                   component: {
                     default: () => (
                       <BasicColumnHeader
-                        title="Customer Email"
+                        title="Email покупателя"
                         id="customerEmail"
                         currentFilters={currentFilters}
                       />
@@ -178,7 +178,7 @@ export default function OrderGrid({
                   component: {
                     default: () => (
                       <ShipmentStatusColumnHeader
-                        title="Shipment Status"
+                        title="Статус заказа"
                         id="shipmentStatus"
                         shipmentStatusList={shipmentStatusList}
                         currentFilters={currentFilters}
@@ -191,7 +191,7 @@ export default function OrderGrid({
                   component: {
                     default: () => (
                       <PaymentStatusColumnHeader
-                        title="Payment Status"
+                        title="Статус оплаты"
                         id="paymentStatus"
                         paymentStatusList={paymentStatusList}
                         currentFilters={currentFilters}
@@ -204,7 +204,7 @@ export default function OrderGrid({
                   component: {
                     default: () => (
                       <FromToColumnHeader
-                        title="Total"
+                        title="Итог"
                         id="grandTotal"
                         currentFilters={currentFilters}
                       />
@@ -299,7 +299,7 @@ export default function OrderGrid({
       </table>
       {orders.length === 0 && (
         <div className="flex w-full justify-center">
-          There is no order to display
+          Нет заказа для отображения
         </div>
       )}
       <Pagination total={total} limit={limit} page={page} />

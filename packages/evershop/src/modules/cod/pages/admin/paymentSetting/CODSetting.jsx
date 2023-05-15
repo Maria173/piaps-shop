@@ -8,11 +8,11 @@ export default function CODPayment({
   setting: { codPaymentStatus, codDislayName }
 }) {
   return (
-    <Card title="Cash On Delivery Payment">
+    <Card title="Оплата наложенным платежом">
       <Card.Session>
         <div className="grid grid-cols-3 gap-2">
           <div className="col-span-1 items-center flex">
-            <h4>Enable?</h4>
+            <h4>Активировать?</h4>
           </div>
           <div className="col-span-2">
             <Toggle name="codPaymentStatus" value={codPaymentStatus} />
@@ -22,13 +22,13 @@ export default function CODPayment({
       <Card.Session>
         <div className="grid grid-cols-3 gap-2">
           <div className="col-span-1 items-center flex">
-            <h4>Dislay Name</h4>
+            <h4>Отобразить название</h4>
           </div>
           <div className="col-span-2">
             <Field
               type="text"
               name="codDislayName"
-              placeholder="Dislay Name"
+              placeholder="Отобразить название"
               value={codDislayName}
             />
           </div>

@@ -72,7 +72,7 @@ export default function Pagination({ total, limit, page }) {
       <div className="flex justify-between w-full space-x-1 mt-1 mb-1">
         <div className="flex space-x-1">
           <div className="self-center">
-            <span>Show</span>
+            <span>Показать</span>
           </div>
           <div className="limit">
             <div className="" style={{ width: '5rem' }}>
@@ -80,7 +80,7 @@ export default function Pagination({ total, limit, page }) {
             </div>
           </div>
           <div className="self-center">
-            <span>per page</span>
+            <span>единиц на странице</span>
           </div>
         </div>
         <div className="flex space-x-1">
@@ -138,7 +138,7 @@ export default function Pagination({ total, limit, page }) {
             </div>
           )}
           <div className="self-center">
-            <span>{total} records</span>
+            <span>{total} записей</span>
           </div>
         </div>
       </div>

@@ -164,7 +164,7 @@ export default function ShippingMethods({
             validationRules={['notEmpty']}
             options={methods.map((m) => ({
               value: m.code,
-              text: `${m.name} - ${m.cost}`
+              text: `${m.name} - ${m.cost.slice(1)+'₽'}`
             }))}
             onChange={(value) => {
               // Update methods with selected flag

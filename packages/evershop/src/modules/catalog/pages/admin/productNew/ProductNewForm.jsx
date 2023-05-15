@@ -24,7 +24,7 @@ export default function ProductNewForm({ action }) {
             )
           );
         } else {
-          toast.success('Product saved successfully!');
+          toast.success('Товар успешно сохранен!');
           // Wait for 2 seconds to show the success message
           setTimeout(() => {
             // Redirect to the edit page
